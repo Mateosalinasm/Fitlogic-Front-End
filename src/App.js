@@ -11,13 +11,18 @@ function App() {
       <Navbar />
       <nav className="fade"></nav>
       <Parallax pages={2}>
-        <ParallaxLayer speed={0.1}>
-          <Video />
-        </ParallaxLayer>
-        <ParallaxLayer className="test" offset={1} speed={1}>
+        <ParallaxLayer speed={0.2}>
           <WorkoutBanner />
         </ParallaxLayer>
-        <ParallaxLayer>
+        <ParallaxLayer className="test" offset={0.9999} speed={1}>
+          <MotionAnimate
+            delay={1.7}
+            speed={2}
+            ease={[0.75, 0.45, 0.53, 0.94]}
+            reset={true}
+          >
+            <Video />
+          </MotionAnimate>
         </ParallaxLayer>
       </Parallax>
     </div>
