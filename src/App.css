@@ -13,9 +13,9 @@ html {
 }
 
 .workout {
-  width: 100vw;
-  height: 100vh;
-  border-radius: 0px;
+  width: 25rem;
+  border: 1px solid white;
+  border-radius: 40px;
 }
 
 .container {
@@ -105,9 +105,11 @@ input {
 }
 
 .workout-banner-container {
-
-  /* border: 1px solid white; */
-  display: fixed;
+  position: relative;
+  top: 5rem;
+  display: grid;
+  grid-template-columns: 400px auto;
+  border: 1px solid white;
 
 }
 
