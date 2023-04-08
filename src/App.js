@@ -29,4 +29,6 @@ function App() {
   );
 }
 
+console.log("Merging is working!!")
+
 export default App;
