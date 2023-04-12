@@ -1,4 +1,4 @@
-nav.active::before {
+/* nav.active::before {
 	content: "";
 	height: 40px;
 	width: 40px;
@@ -77,4 +77,4 @@ nav img {
 	width: auto;
 	margin-right: 1rem;
   }
-  
+   */
