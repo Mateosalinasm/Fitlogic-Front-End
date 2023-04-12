@@ -1,4 +1,7 @@
+import { motion } from 'framer-motion'
+
 const Navbar = () => {
+
     return (
     <div className="container">
         <div className="navbar ">
@@ -16,7 +19,13 @@ const Navbar = () => {
                         <input type="text" />
                     </form>
                 </div>
-                <img className="menu " src="assets/images/more.png" alt="Menu" />
+                <motion.button 
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.8 }}
+                    className='menu-btn' 
+                    onClick={() => null}>
+                    <img className="menu " src="assets/images/more.png" alt="Menu" />
+                </motion.button>
             </div>
         </div>
     </div>

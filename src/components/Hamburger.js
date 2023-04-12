@@ -1,53 +1,53 @@
-import { useState } from "react";
+// import { useState } from "react";
 
-require("./Navbar.css");
+// require("./Hamburger.css");
 
-const Navbar = () => {
-	const [nav, setNav] = useState(false);
+// const NavbarAh = () => {
+// 	const [nav, setNav] = useState(false);
 
-	const toggleNav = () => {
-		setNav(!nav);
-	};
+// 	const toggleNav = () => {
+// 		setNav(!nav);
+// 	};
 
-	return (
-		<nav className={nav ? "active" : ""}>
-			<img src="/images/fitlogic.png" alt="Logo" />
-			<button onClick={toggleNav}>
-				<img src="images/hamburger.svg" />
-			</button>
-			<div className={nav ? "active" : ""}>
-				<button onClick={toggleNav}>
-					<img src="images/close.svg" />
-				</button>
+// 	return (
+// 		<nav className={nav ? "active" : ""}>
+// 			<img src="" alt="Logo" />
+// 			<button onClick={toggleNav}>
+// 				<img src="assets/images/more.png" />
+// 			</button>
+// 			<div className={nav ? "active" : ""}>
+// 				<button onClick={toggleNav}>
+// 					<img src="images/close.svg" />
+// 				</button>
 
-				<ul>
-					<li>
-                    <p> <a href="#">Home</a></p>
-					</li>
+// 				<ul>
+// 					<li>
+//                     <p> <a href="#">Home</a></p>
+// 					</li>
 
-					<li>
+// 					<li>
 
-                    <p> <a href="#">workouts</a></p>
+//                     <p> <a href="#">workouts</a></p>
 					
-					</li>
+// 					</li>
 
-					<li>
-                    <p> <a href="#">custom workouts</a></p>
+// 					<li>
+//                     <p> <a href="#">custom workouts</a></p>
 
-					</li>
+// 					</li>
 
-					<li>
-					<p> <a href="#">healthy tips</a></p>
-					</li>
+// 					<li>
+// 					<p> <a href="#">healthy tips</a></p>
+// 					</li>
 					
-					<li>
-					<p> <a href="#">sign in/up</a></p>
-					</li>
+// 					<li>
+// 					<p> <a href="#">sign in/up</a></p>
+// 					</li>
 
-				</ul>
-			</div>
-		</nav>
-	);
-};
+// 				</ul>
+// 			</div>
+// 		</nav>
+// 	);
+// };
 
-export default Navbar;
+// export default NavbarAh;
