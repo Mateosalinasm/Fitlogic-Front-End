@@ -4,7 +4,7 @@ const  API  = process.env.API;
 const APIKEY = process.env.APIKEY;
 
 
-// ------------- First API that retrieves several excercises -------------------
+  //=============Generates 10 random workouts by muscle group========================
 
 // const options = {
 //     method: 'GET',
@@ -22,23 +22,20 @@ const APIKEY = process.env.APIKEY;
 //       console.error(error);
 //   });
 
+    //=============Searches by excercise and shows info ========================
 
-//-------------------------------------------------------------------------------------
-
-// --------Searches by muscle name ----------------------
-
-const options = {
-  method: 'GET',
-  url: 'https://exerciseapi3.p.rapidapi.com/search/',
-  params: {name: 'Barbell Bench Press'},
-  headers: {
-    'X-RapidAPI-Key': APIKEY,
-    'X-RapidAPI-Host': 'exerciseapi3.p.rapidapi.com'
-  }
-};
-
-axios.request(options).then(function (response) {
-	console.log(response.data);
-}).catch(function (error) {
-	console.error(error);
-});
+    const options = {
+      method: 'GET',
+      url: 'https://exerciseapi3.p.rapidapi.com/search/',
+      params: {primaryMuscle: 'pectoralis major'}, //search params
+      headers: {
+        'X-RapidAPI-Key': APIKEY,
+        'X-RapidAPI-Host': 'exerciseapi3.p.rapidapi.com'
+      }
+    };
+    
+    axios.request(options).then(function (response) {
+      console.log(response.data);
+    }).catch(function (error) {
+      console.error(error);
+    });
