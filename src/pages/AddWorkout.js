@@ -1,6 +1,6 @@
 const AddWorkout = () => {
     return (
-<h1>Welcome AddWorkout</h1>
+<h1>Welcome to AddWorkout</h1>
     )
 }
 

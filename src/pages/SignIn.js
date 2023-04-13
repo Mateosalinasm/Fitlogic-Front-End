@@ -1,6 +1,6 @@
 const SignIn = () => {
     return (
-<h1>Welcome signin</h1>
+<h1>Welcome to signin</h1>
     )
 }
 

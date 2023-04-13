@@ -1,9 +1,6 @@
 import { useState } from "react";
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-
 import Navbar from './components/Navbar.js'
-
 import Home from './pages/Home';
 import Workout from './pages/Workout';
 import AddWorkout from './pages/AddWorkout';
@@ -11,13 +8,8 @@ import Helthytips from './pages/Helthytips';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import SignIn from './pages/SignIn';
-
-
-
-
 import Video from "./components/WelcomeVideo";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-
 import WorkoutBanner from "./components/WorkoutBanner";
 import { MotionAnimate } from "react-motion-animate";
 import Banner from "./components/Banner";
@@ -25,15 +17,12 @@ import { motion } from 'framer-motion'
 import Image from "./components/Image";
 import "./App.css";
 
-
 function App() {
 
   return (
     <div className="App">
 
       <Navbar />
-
-      
 
         <Routes>
           <Route path="/" element={<Home />} />
@@ -44,8 +33,6 @@ function App() {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/SignIn" element={<SignIn />} />
         </Routes>
-
-      
 
       <nav className="fade"></nav>
       <Parallax pages={3} style={{ top: "0", left: "0" }}>

@@ -1,6 +1,6 @@
 const Helthytips = () => {
     return (
-<h1>Welcome Helthytips</h1>
+<h1>Welcome to Helthytips</h1>
     )
 }
 

@@ -26,11 +26,9 @@ const Navbar = (props) => {
             className="nav-links"
           >
             <li>
-
               <Link to="/">
                 <div>Home</div>
               </Link>
-
             </li>
 
             <li>
@@ -76,7 +74,6 @@ const Navbar = (props) => {
             className="menu-btn"
             onClick={() => null}
           >
-            <img className="menu" src="assets/images/more.png" alt="Menu" />
           </motion.button>
         </div>
       </div>
