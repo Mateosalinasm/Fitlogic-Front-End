@@ -4,7 +4,7 @@ import Navbar from './components/Navbar.js'
 import Home from './pages/Home';
 import Workout from './pages/Workout';
 import AddWorkout from './pages/AddWorkout';
-import Helthytips from './pages/Helthytips';
+import HealthyTips from "./pages/HealthyTips.js";
 import About from './pages/About';
 import Contact from './pages/Contact';
 import SignIn from './pages/SignIn';
@@ -19,56 +19,62 @@ import "./App.css";
 
 function App() {
 
+  const [activePage, setActivePage] = useState("home");
+
+  const handleLinkClick = (page) => {
+    setActivePage(page);
+  };
+
   return (
     <div className="App">
-
-      <Navbar />
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Workout" element={<Workout />} />
-          <Route path="/AddWorkout" element={<AddWorkout />} />
-          <Route path="/Helthytips" element={<Helthytips />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="/SignIn" element={<SignIn />} />
-        </Routes>
-
+      <Navbar activePage={activePage} onLinkClick={handleLinkClick} />
       <nav className="fade"></nav>
-      <Parallax pages={3} style={{ top: "0", left: "0" }}>
-        <ParallaxLayer speed={0.4}>
-          <MotionAnimate
-            delay={1}
-            speed={1}
-            ease={[0.75, 0.45, 0.53, 0.94]}
-           reset={true}
-          >
-            <Video />
-          </MotionAnimate>
-        </ParallaxLayer>
 
-        <ParallaxLayer className="test" offset={1} speed={1.4}>
-          <MotionAnimate
-            delay={0.2}
-            speed={1}
-            ease={[0.5, 0.45, 0.53, 0.94]}
-            reset={true}
-          >
-            <WorkoutBanner />
-          </MotionAnimate>
-        </ParallaxLayer>
+      <MotionAnimate
+        delay={1}
+        speed={1}
+        ease={[0.75, 0.45, 0.53, 0.94]}
+        reset={true}
+      >
+        <Video />
+      </MotionAnimate>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
 
-        <ParallaxLayer offset={1.59} speed={0.9}>
-          <MotionAnimate
-            delay={0.7}
-            speed={1}
-            ease={[0.75, 0.45, 0.53, 0.94]}
-            reset={true}
-          >
-            <Banner />
-          </MotionAnimate>
-        </ParallaxLayer>
-      </Parallax>
+      <MotionAnimate
+        className="workout-banner-motion"
+        delay={1}
+        speed={1}
+        ease={[0.8, 0.45, 0.53, 0.94]}
+        reset={true}
+      >
+        <WorkoutBanner />
+      </MotionAnimate>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <MotionAnimate
+        delay={0.7}
+        speed={1}
+        ease={[0.75, 0.45, 0.53, 0.94]}
+        reset={true}
+      >
+        <Banner />
+      </MotionAnimate>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/workout" element={<Workout />} />
+        <Route path="/addWorkout" element={<AddWorkout />} />
+        <Route path="/healthy-tips" element={<HealthyTips />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/signIn" element={<SignIn />} />
+      </Routes>
     </div>
   );
 }

@@ -3,7 +3,7 @@ html {
 }
 .App {
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: #121212;
   display: block;
 }
 
@@ -120,11 +120,16 @@ input {
 .workout-banner-container {
   width: auto;
   position: relative;
-  top: -15rem;
+  /* top: 3rem; */
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
+
+/* .workout-banner-motion {
+  position: relative;
+  top: 20rem;
+} */
 
 
 .card {
@@ -163,17 +168,6 @@ transform: translate(30px, 20px) scale(1.1);
 z-index: 3;
 }
 
-element.style {
-  z-index: -1;
-}
-
-
-/* .about-us:hover + .mission-title  {
-    text-shadow: 10px 7px 10px black;
-}
-.mission ~ .about-us {
-  background-color: yellow;
-} */
 
 .banner-container {
   display: flex;
@@ -222,11 +216,11 @@ element.style {
 
 .banner-image {
   display: flex;
-  position: absolute;
+  position: relative;
   border-radius: 10px;
   width: 40rem;
   top: 2rem;
-  left: 22rem;
+  left: -6rem;
 }
 
 .title {
@@ -240,6 +234,18 @@ element.style {
   width: 600px;
   font-family: Kaushan Script;
 }
+
+ul {
+  list-style: none;
+    display: none;
+}
+a {
+  color: white;
+  text-decoration: none;
+
+}
+
+
 
 
 /* ------------------------------------------------------------------------------ */
