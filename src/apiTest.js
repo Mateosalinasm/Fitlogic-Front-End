@@ -34,8 +34,28 @@ const APIKEY = process.env.APIKEY;
       }
     };
     
+
+    //===================Original Request===========================
+    // axios.request(options).then(function (response) {
+    //   console.log(response.data[5]);
+    // }).catch(function (error) {
+    //   console.error(error);
+    // });
+    
+    //=============Requests an exercise for param muscle at random ========================
+
     axios.request(options).then(function (response) {
-      console.log(response.data);
+      
+      if (response.data && response.data.length > 0) {
+        const randomIndex = Math.floor(Math.random() * response.data.length);
+        const randomExercise = response.data[randomIndex];
+        console.log(randomExercise);
+      } else {
+        console.log("No valid exercises found.");
+      }
+    
+  
     }).catch(function (error) {
       console.error(error);
     });
+    
