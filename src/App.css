@@ -264,7 +264,14 @@ background-color: transparent;}
     background-color: rgba(27, 26, 26, 0.92);
 }
 
+.carousel-container {
+  margin: 0 auto;
+  top: 11rem;
+  position: relative;
+  width: 45rem;
+  height: 35rem;
 
+}
 
 
 
