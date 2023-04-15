@@ -503,5 +503,34 @@ input {
   width: 70px;
 }
 
+}
 
+}
+
+.tip {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tip img {
+  width: 400px;
+  margin-right: 20px;
+  height: 250px;
+}
+
+.tip p {
+  width: 50%;
+}
+
+.tips {
+  font-size: 30px;
+  color: aliceblue;
+}
+
+.wrapper {
+  position: relative;
+  top: 5rem;
 }
