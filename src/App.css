@@ -1,35 +1,22 @@
 html {
   background-color: #121212;
-  overflow-x: hidden;
-}
-
-html::-webkit-scrollbar {
-  width: 1vw;
-  height: 10px;
-  
-}
-
-html::-webkit-scrollbar-thumb {
-  background-color: rgba(46, 45, 45, 0.8);
-
-}
-html::-webkit-scrollbar-track {
-  background-color: #121212
 }
 .App {
   text-align: center;
-  background-color: #121212;
+  background-color: rgba(255, 255, 255, 0.15);
   display: block;
 }
 
 .welcome-vid {
-  /* margin-top: 5rem; */
-  width: 100vw;
-  /* border-radius: 30px; */
+  margin-top: 8rem;
+  width: 90vw;
+  border-radius: 30px;
+  /* border: 5px solid white; */
   z-index: 2;
 }
 
 .workout {
+  /* margin-left: 3rem; */
   width: 35rem;
   border-radius: 40px;
   color: white;
@@ -60,9 +47,9 @@ html::-webkit-scrollbar-track {
 .fade {
   position: fixed;
   z-index: 2;
-  height: 6rem;
+  height: 5rem;
   width: 100vw;
-  background-image: linear-gradient(to top, transparent, rgba(38, 39, 38, 0.7));
+  background-image: linear-gradient(to top, transparent, rgba(54, 55, 52, 0.7));
 }
 
 /* Navbar icons */
@@ -104,7 +91,7 @@ html::-webkit-scrollbar-track {
 }
 
 .search {
-  width: 35px;
+  width: 30px;
   filter: invert(1);
 }
 
@@ -133,16 +120,11 @@ input {
 .workout-banner-container {
   width: auto;
   position: relative;
-  /* top: 3rem; */
+  top: -15rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-
-/* .workout-banner-motion {
-  position: relative;
-  top: 20rem;
-} */
 
 
 .card {
@@ -159,6 +141,8 @@ p {
     border: none;
 }
 
+
+
 .about-us {
 position: relative;
 font-size: 20px;
@@ -168,6 +152,7 @@ background-color: transparent;
 font-family: "Roboto Condensed",sans-serif;
 transition: transform 0.5s ease, box-shadow 0.3s ease;
 text-shadow: 1px 2px 2px black;
+z-index: 6;
 }
 
 .about-us:hover{
@@ -175,8 +160,20 @@ position: relative;
 height: 21rem;
 box-shadow: 1px 4px 40px black;
 transform: translate(30px, 20px) scale(1.1);
+z-index: 3;
 }
 
+element.style {
+  z-index: -1;
+}
+
+
+/* .about-us:hover + .mission-title  {
+    text-shadow: 10px 7px 10px black;
+}
+.mission ~ .about-us {
+  background-color: yellow;
+} */
 
 .banner-container {
   display: flex;
@@ -216,25 +213,20 @@ transform: translate(30px, 20px) scale(1.1);
   position: relative;
   text-align: left;
   height: 30rem;
-  width: 60vw;
+  width: 55vw;
   background-color: rgba(86, 85, 85, 0.1);
   border-radius: 10px;
-  padding-left: 10rem;
-  margin-right: 5rem;
-  margin-bottom: 2rem;
+  padding-left: 3rem;
 
 }
 
 .banner-image {
   display: flex;
-  position: relative;
+  position: absolute;
   border-radius: 10px;
-  width: 45vw;
-  height: 50%;
+  width: 40rem;
   top: 2rem;
-  left: 3rem;
-  margin-bottom: 5rem;
-
+  left: 22rem;
 }
 
 .title {
@@ -245,65 +237,9 @@ transform: translate(30px, 20px) scale(1.1);
 
 .motivational-quote {
   font-size: 2rem;
-  width: 500px;
+  width: 600px;
   font-family: Kaushan Script;
 }
-
-ul {
-  list-style: none;
-  position: absolute;
-  right: 12rem;
-  top: 4rem;
-  font-size: 35px;
-  text-align: left;
-  transition: 1s;
-  line-height: 45px;
-  background-color: rgba(27, 26, 26, 0.92);
-  padding: 30px;
-  border-radius: 30px;
-  width: auto;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
-  font-family: 'Poppins', sans-serif;
-  
-}
-
-li {
-  line-height: 60px;
-    opacity: 60%;
-}
-
-li:hover {
-  transform: scale(1.05);
-  transition: .3s;
-}
-
-li:hover {
-  border-bottom: 1px solid rgb(139, 139, 139);
-  opacity: 100%;
-
-}
-
-.nav-links {
-  background-color: transparent;}
-
-.nav-links.open {
-  background-color: rgba(27, 26, 26, 0.92);
-}
-
-.carousel-container {
-  margin: 0 auto;
-  top: 11rem;
-  position: relative;
-  width: 45rem;
-  height: 35rem;
-
-}
-
 
 
 /* ------------------------------------------------------------------------------ */
@@ -504,27 +440,4 @@ input {
 }
 
 
-}
-
-.tip {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.tip img {
-  width: 400px;
-  margin-right: 20px;
-  height: 250px;
-}
-
-.tip p {
-  width: 50%;
-}
-
-.tips {
-  font-size: 30px;
-  color: aliceblue;
 }
