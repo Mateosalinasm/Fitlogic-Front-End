@@ -52,14 +52,14 @@ const Navbar = ({ activePage, onLinkClick }) => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        transition={{ duration: 0.3 }}
+                        transition={{ duration: 0.2 }}
                     />
                     )}
                     <motion.ul
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 0.5 }} // set the duration value to 1 second for both
+                    transition={{ duration: 0.2 }} // set the duration value to 1 second for both
                     className={`nav-links ${menuOpen ? "open" : ""}`}
                     >
                     {menuOpen ? (
@@ -72,8 +72,8 @@ const Navbar = ({ activePage, onLinkClick }) => {
                                 return {
                                 fontWeight: isActive ? "600" : "",
                                 borderBottom: isActive ? "1px solid rgb(139, 139, 139)" : "",
-                                color: isPending ? "white" : "white",
-                                opacity: isActive ? "100%" : "60%",
+                                color: isActive ? "#A7FA38" : "white",
+                                opacity: isActive ? "100%" : "90%",
                                 };
                             }}
                             >
@@ -88,8 +88,8 @@ const Navbar = ({ activePage, onLinkClick }) => {
                                 return {
                                 fontWeight: isActive ? "600" : "",
                                 borderBottom: isActive ? "1px solid rgb(139, 139, 139)" : "",
-                                color: isPending ? "white" : "white",
-                                opacity: isActive ? "100%" : "60%",
+                                color: isActive ? "#A7FA38" : "white",
+                                opacity: isActive ? "100%" : "90%",
                                 };
                             }}
                             >
@@ -104,8 +104,8 @@ const Navbar = ({ activePage, onLinkClick }) => {
                                 return {
                                 fontWeight: isActive ? "600" : "",
                                 borderBottom: isActive ? "1px solid rgb(139, 139, 139)" : "",
-                                color: isPending ? "white" : "white",
-                                opacity: isActive ? "100%" : "60%",
+                                color: isActive ? "#A7FA38" : "white",
+                                opacity: isActive ? "100%" : "90%",
                                 };
                             }}>
                                 My Workout
@@ -119,8 +119,8 @@ const Navbar = ({ activePage, onLinkClick }) => {
                                 return {
                                 fontWeight: isActive ? "600" : "",
                                 borderBottom: isActive ? "1px solid rgb(139, 139, 139)" : "",
-                                color: isPending ? "white" : "white",
-                                opacity: isActive ? "100%" : "60%",
+                                color: isActive ? "#A7FA38" : "white",
+                                opacity: isActive ? "100%" : "90%",
                                 };
                             }}>
                                 Healthy Tips
@@ -134,8 +134,8 @@ const Navbar = ({ activePage, onLinkClick }) => {
                                 return {
                                 fontWeight: isActive ? "600" : "",
                                 borderBottom: isActive ? "1px solid rgb(139, 139, 139)" : "",
-                                color: isPending ? "white" : "white",
-                                opacity: isActive ? "100%" : "60%",
+                                color: isActive ? "#A7FA38" : "white",
+                                opacity: isActive ? "100%" : "90%",
                                 };
                             }}>
                                 Contact Us
@@ -149,8 +149,8 @@ const Navbar = ({ activePage, onLinkClick }) => {
                                 return {
                                 fontWeight: isActive ? "600" : "",
                                 borderBottom: isActive ? "1px solid rgb(139, 139, 139)" : "",
-                                color: isPending ? "white" : "white",
-                                opacity: isActive ? "100%" : "60%",
+                                color: isActive ? "#A7FA38" : "white",
+                                opacity: isActive ? "100%" : "90%",
                                 };
                             }}>
                                 About Us
@@ -164,8 +164,8 @@ const Navbar = ({ activePage, onLinkClick }) => {
                                 return {
                                 fontWeight: isActive ? "600" : "",
                                 borderBottom: isActive ? "1px solid rgb(139, 139, 139)" : "",
-                                color: isPending ? "white" : "white",
-                                opacity: isActive ? "100%" : "60%",
+                                color: isActive ? "#A7FA38" : "white",
+                                opacity: isActive ? "100%" : "90%",
                                 };
                             }}>
                                 Sign in
