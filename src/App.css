@@ -250,19 +250,18 @@ transform: translate(30px, 20px) scale(1.1);
 }
 
 ul {
-  
-    list-style: none;
-    position: absolute;
-    right: 12rem;
-    top: 4rem;
-    font-size: 35px;
-    text-align: left;
-    transition: 1s;
-    line-height: 45px;
-    background-color: rgba(27, 26, 26, 0.92);
-    padding: 20px;
-    border-radius: 30px;
-    width: auto;
+  list-style: none;
+  position: absolute;
+  right: 12rem;
+  top: 4rem;
+  font-size: 35px;
+  text-align: left;
+  transition: 1s;
+  line-height: 45px;
+  background-color: rgba(27, 26, 26, 0.92);
+  padding: 30px;
+  border-radius: 30px;
+  width: auto;
 }
 
 a {
@@ -270,19 +269,30 @@ a {
   text-decoration: none;
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
+  
+}
+
+li {
+  line-height: 60px;
+    opacity: 60%;
 }
 
 li:hover {
   transform: scale(1.05);
   transition: .3s;
-  
+}
+
+li:hover {
+  border-bottom: 1px solid rgb(139, 139, 139);
+  opacity: 100%;
+
 }
 
 .nav-links {
-background-color: transparent;}
+  background-color: transparent;}
 
 .nav-links.open {
-    background-color: rgba(27, 26, 26, 0.92);
+  background-color: rgba(27, 26, 26, 0.92);
 }
 
 .carousel-container {
