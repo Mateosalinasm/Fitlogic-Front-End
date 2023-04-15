@@ -249,10 +249,8 @@ transform: translate(30px, 20px) scale(1.1);
   height: auto;
   width: fit-content;
   box-shadow: 1px 4px 40px black;
-  transform: translate(-30px, 20px) scale(1.1);
+  transform: translate(-16px, 20px) scale(1.1);
 }
-
-
 
 ul {
     list-style: none;
