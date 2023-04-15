@@ -40,7 +40,7 @@ const Home = () => {
         <br />
         <br />
         <MotionAnimate
-        delay={0.7}
+        delay={1.3}
         speed={1}
         ease={[0.75, 0.45, 0.53, 0.94]}
         reset={true}

@@ -19,7 +19,7 @@ const WorkoutBanner = () => {
         <div className="workout-banner">
             <img
                 className="workout"
-                src="assets/images/5.png"
+                src="assets/images/workout/5.png"
                 alt=""
             />
         </div>
