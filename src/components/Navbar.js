@@ -56,37 +56,37 @@ const Navbar = ({ activePage, onLinkClick}) => {
                 {menuOpen ? (
                     <React.Fragment>
                     <li>
-                        <Link to="/" onClick={() => onLinkClick('home')}>
+                        <Link to="/">
                         <div className={activePage === 'home' ? 'active' : ''}>Home</div>
                         </Link>
                     </li>
                     <li>
-                        <Link to="/workout" onClick={() => onLinkClick('workout')}>
+                        <Link to="/workout">
                         <div className={activePage === 'workout' ? 'active' : ''}>Workouts</div>
                         </Link>
                     </li>
                     <li>
-                        <Link to="/addWorkout" onClick={() => onLinkClick('addWorkout')}>
+                        <Link to="/addWorkout">
                         <div className={activePage === 'addWorkout' ? 'active' : ''}>My Workout</div>
                         </Link>
                     </li>
                     <li>
-                        <Link to="/healthy-tips" onClick={() => onLinkClick('healthy-tips')}>
+                        <Link to="/healthy-tips">
                         <div className={activePage === 'healthy-tips' ? 'active' : ''}>Healthy Tips</div>
                         </Link>
                     </li>
                     <li>
-                        <Link to="/contact" onClick={() => onLinkClick('contact')}>
+                        <Link to="/contact">
                         <div className={activePage === 'contact' ? 'active' : ''}>Contact</div>
                         </Link>
                     </li>
                     <li>
-                        <Link to="/about" onClick={() => onLinkClick('about')}>
+                        <Link to="/about">
                         <div className={activePage === 'about' ? 'active' : ''}>About Us</div>
                         </Link>
                     </li>
                     <li>
-                        <Link to="/sign-in" onClick={() => onLinkClick('sign-in')}>
+                        <Link to="/sign-in">
                         <div className={activePage === 'sign-in' ? 'active' : ''}>Sign in</div>
                         </Link>
                     </li>
