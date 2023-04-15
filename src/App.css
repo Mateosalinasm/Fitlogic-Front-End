@@ -439,5 +439,8 @@ input {
   width: 70px;
 }
 
+}
 
+.wrapper {
+  padding: 20px;
 }
