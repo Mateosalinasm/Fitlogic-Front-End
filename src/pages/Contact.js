@@ -38,7 +38,7 @@ const Contact = () => {
     <div class="plate"></div>
     <div class="plate"></div>
     <div class="button__wrapper">
-      <span class="button__text">submit</span>
+      <span class="button__text">Submit</span>
     </div>
     <div class="button__box">
       <div class="inner inner__top"></div>
