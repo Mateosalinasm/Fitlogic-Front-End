@@ -2,6 +2,7 @@ const axios = require("axios");
 require('dotenv').config();
 const  API  = process.env.API;
 const APIKEY = process.env.APIKEY;
+// const PORT = process.env.PORT;
 
 
   //=============Generates 10 random workouts by muscle group========================
@@ -59,3 +60,6 @@ const APIKEY = process.env.APIKEY;
       console.error(error);
     });
     
+  //   export default axios.create({
+  //     baseURL: PORT
+  // });
