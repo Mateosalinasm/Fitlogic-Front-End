@@ -8,7 +8,7 @@ import HealthyTips from "./pages/HealthyTips.js";
 import About from './pages/About';
 import Contact from './pages/Contact';
 import SignIn from './pages/SignIn';
-import Register from "./Register";
+// import Register from "./Register";
 
 import "./App.css";
 
@@ -33,7 +33,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/signIn" element={<SignIn />} />
       </Routes>
-      <Register/>
+      {/* <Register/> */}
     </div>
   );
 }
