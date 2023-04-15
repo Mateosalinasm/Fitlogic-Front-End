@@ -129,11 +129,11 @@ const Navbar = ({ activePage, onLinkClick }) => {
                     className="menu-btn"
                     onClick={toggleMenu}
                 >
-                    <img
-                    className="menu"
-                    src="/assets/images/icons/more.png"
-                    alt="Menu"
-                    />
+                     {menuOpen ? (
+    <img className='menu' src="/assets/images/close.png" alt="Close-menu" />
+  ) : (
+    <img className='menu' src="/assets/images/open.png" alt="open-Menu" />
+  )}
                 </motion.button>
                 </div>
             </div>
