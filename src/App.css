@@ -241,6 +241,62 @@ element.style {
   font-family: Kaushan Script;
 }
 
+ul {
+  list-style: none;
+  position: absolute;
+  right: 12rem;
+  top: 4rem;
+  font-size: 35px;
+  text-align: left;
+  transition: 1s;
+  line-height: 45px;
+  background-color: rgba(27, 26, 26, 0.92);
+  padding: 30px;
+  border-radius: 30px;
+  width: auto;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+li {
+  line-height: 60px;
+  /* opacity: 60%; */
+}
+
+li:hover {
+  transform: scale(1.05);
+  transition: .3s;
+}
+
+li:hover {
+  /* border-bottom: 1px solid rgb(139, 139, 139); */
+  /* opacity: 100%; */
+
+}
+
+.nav-links {
+  background-color: transparent;}
+
+.nav-links.open {
+  background-color: rgba(27, 26, 26, 0.92);
+}
+
+.carousel-container {
+  margin: 0 auto;
+  top: 11rem;
+  position: relative;
+  width: 45rem;
+  height: 35rem;
+
+}
+
+
 
 /* ------------------------------------------------------------------------------ */
 
@@ -439,5 +495,29 @@ input {
   width: 70px;
 }
 
+}
 
+}
+
+.tip {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tip img {
+  width: 400px;
+  margin-right: 20px;
+  height: 250px;
+}
+
+.tip p {
+  width: 50%;
+}
+
+.tips {
+  font-size: 30px;
+  color: aliceblue;
 }

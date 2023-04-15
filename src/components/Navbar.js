@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { MotionAnimate } from "react-motion-animate";
 import Backdrop from "./BackDrop.js";
@@ -65,59 +65,111 @@ const Navbar = ({ activePage, onLinkClick }) => {
                     {menuOpen ? (
                         <React.Fragment>
                         <li>
-                            <Link to="/" onClick={handleLinkClick}>
-                            <div className={activePage === "home" ? "active" : ""}>
+                            <NavLink
+                            to="/"
+                            onClick={handleLinkClick}
+                            style={({ isActive, isPending }) => {
+                                return {
+                                fontWeight: isActive ? "600" : "",
+                                borderBottom: isActive ? "1px solid rgb(139, 139, 139)" : "",
+                                color: isPending ? "white" : "white",
+                                opacity: isActive ? "100%" : "60%",
+                                };
+                            }}
+                            >
                                 Home
-                            </div>
-                            </Link>
+                            </NavLink>
                         </li>
                         <li>
-                            <Link to="/workout" onClick={handleLinkClick}>
-                            <div className={activePage === "workout" ? "active" : ""}>
+                            <NavLink
+                            to="/workout"
+                            onClick={handleLinkClick}
+                            style={({ isActive, isPending }) => {
+                                return {
+                                fontWeight: isActive ? "600" : "",
+                                borderBottom: isActive ? "1px solid rgb(139, 139, 139)" : "",
+                                color: isPending ? "white" : "white",
+                                opacity: isActive ? "100%" : "60%",
+                                };
+                            }}
+                            >
                                 Workouts
-                            </div>
-                            </Link>
+                            </NavLink>
                         </li>
                         <li>
-                            <Link to="/addWorkout" onClick={handleLinkClick}>
-                            <div
-                                className={activePage === "addWorkout" ? "active" : ""}
-                            >
+                            <NavLink
+                            to="/addWorkout"
+                            onClick={handleLinkClick}
+                            style={({ isActive, isPending }) => {
+                                return {
+                                fontWeight: isActive ? "600" : "",
+                                borderBottom: isActive ? "1px solid rgb(139, 139, 139)" : "",
+                                color: isPending ? "white" : "white",
+                                opacity: isActive ? "100%" : "60%",
+                                };
+                            }}>
                                 My Workout
-                            </div>
-                            </Link>
+                            </NavLink>
                         </li>
                         <li>
-                            <Link to="/healthy-tips" onClick={handleLinkClick}>
-                            <div
-                                className={
-                                activePage === "healthy-tips" ? "active" : ""
-                                }
-                            >
+                            <NavLink
+                            to="/healthy-tips"
+                            onClick={handleLinkClick}
+                            style={({ isActive, isPending }) => {
+                                return {
+                                fontWeight: isActive ? "600" : "",
+                                borderBottom: isActive ? "1px solid rgb(139, 139, 139)" : "",
+                                color: isPending ? "white" : "white",
+                                opacity: isActive ? "100%" : "60%",
+                                };
+                            }}>
                                 Healthy Tips
-                            </div>
-                            </Link>
+                            </NavLink>
                         </li>
                         <li>
-                            <Link to="/contact" onClick={handleLinkClick}>
-                            <div className={activePage === "contact" ? "active" : ""}>
-                                Contact
-                            </div>
-                            </Link>
+                            <NavLink
+                            to="/contact"
+                            onClick={handleLinkClick}
+                            style={({ isActive, isPending }) => {
+                                return {
+                                fontWeight: isActive ? "600" : "",
+                                borderBottom: isActive ? "1px solid rgb(139, 139, 139)" : "",
+                                color: isPending ? "white" : "white",
+                                opacity: isActive ? "100%" : "60%",
+                                };
+                            }}>
+                                Contact Us
+                            </NavLink>
                         </li>
                         <li>
-                            <Link to="/about" onClick={handleLinkClick}>
-                            <div className={activePage === "about" ? "active" : ""}>
+                            <NavLink
+                            to="/about"
+                            onClick={handleLinkClick}
+                            style={({ isActive, isPending }) => {
+                                return {
+                                fontWeight: isActive ? "600" : "",
+                                borderBottom: isActive ? "1px solid rgb(139, 139, 139)" : "",
+                                color: isPending ? "white" : "white",
+                                opacity: isActive ? "100%" : "60%",
+                                };
+                            }}>
                                 About Us
-                            </div>
-                            </Link>
+                            </NavLink>
                         </li>
                         <li>
-                            <Link to="/sign-in" onClick={handleLinkClick}>
-                            <div className={activePage === "sign-in" ? "active" : ""}>
+                            <NavLink
+                            to="/sign-in"
+                            onClick={handleLinkClick}
+                            style={({ isActive, isPending }) => {
+                                return {
+                                fontWeight: isActive ? "600" : "",
+                                borderBottom: isActive ? "1px solid rgb(139, 139, 139)" : "",
+                                color: isPending ? "white" : "white",
+                                opacity: isActive ? "100%" : "60%",
+                                };
+                            }}>
                                 Sign in
-                            </div>
-                            </Link>
+                            </NavLink>
                         </li>
                         </React.Fragment>
                     ) : null}
