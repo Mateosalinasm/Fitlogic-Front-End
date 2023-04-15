@@ -528,3 +528,8 @@ input {
   font-size: 30px;
   color: aliceblue;
 }
+
+.wrapper {
+  position: relative;
+  top: 5rem;
+}

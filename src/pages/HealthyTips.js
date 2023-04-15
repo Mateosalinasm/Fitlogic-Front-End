@@ -1,6 +1,6 @@
 const HealthyTips = () => {
     return (
-      <div>
+      <div className="wrapper">
 
         <div className="tip">
           <img src="/assets/images/food/assortment-of-colorful-ripe-tropical-fruits-top-royalty-free-image-995518546-1564092355.jpg" alt="First tip" />
