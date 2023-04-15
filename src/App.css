@@ -34,6 +34,7 @@ html::-webkit-scrollbar-track {
   width: 100vw;
   /* border-radius: 30px; */
   z-index: 2;
+
 }
 
 .water-wrapper {
@@ -47,7 +48,8 @@ html::-webkit-scrollbar-track {
     width: 100%;
     height: 100%;
     top: -17rem;
-}
+    -webkit-mask-image: -webkit-gradient(linear, left 85%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  }
 
 .health-title {
   position: absolute;
@@ -170,12 +172,6 @@ input {
   justify-content: space-around;
   align-items: center;
 }
-
-/* .workout-banner-motion {
-  position: relative;
-  top: 20rem;
-} */
-
 
 .card {
   width: 300px;
@@ -331,18 +327,20 @@ a {
 }
 
 .tip img {
-  width: 400px;
-  margin-right: 20px;
-  height: 250px;
+  width: 600px;
+  margin-inline: 20px;
+  height: auto;
+  border-radius: 30px;
+  
 }
 
-.tip p {
-  width: 50%;
-}
 
 .tips {
   font-size: 30px;
   color: aliceblue;
+  padding: 50px;
+  /* border: 1px solid white; */
+  width: 500px;
 }
 
 .wrapper {
@@ -364,6 +362,11 @@ li:hover {
   /* border-bottom: 1px solid rgb(139, 139, 139); */
   opacity: 100%;
 
+}
+
+.health-image {
+  border-radius: 30px;
+  width: 60px;
 }
 
 .nav-links {

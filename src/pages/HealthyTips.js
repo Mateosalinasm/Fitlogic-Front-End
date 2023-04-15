@@ -1,4 +1,5 @@
 import { MotionAnimate } from "react-motion-animate";
+import { motion } from 'framer-motion'
 
 const HealthyTips = () => {
     return (
@@ -10,21 +11,41 @@ const HealthyTips = () => {
             ease={[0.75, 0.45, 0.53, 0.94]}
             // reset={true}
             >
-            <h1 className="health-title">Healthy Tips</h1>
-            <h4 className="motivational-quote health-quote">“Your body can stand almost anything. It’s your mind that you have to convince.”-Andrew Murphy</h4>
+            <motion.h1
+                className="health-title"
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{
+                    duration: '2',
+                    delay: '3',
+            }}
+            >
+                Healthy Tips
+            </motion.h1>
+            <motion.h4
+                className="motivational-quote health-quote"
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{
+                    duration: '2',
+                    delay: '4',
+            }}
+            >
+                “Your body can stand almost anything. It’s your mind that you have to convince.”-Andrew Murphy
+            </motion.h4>
             <video className="water" src="/assets/images/videos/pexels-rostislav-uzunov-7385122.mp4" 
             autoPlay
             loop
             muted
             >
             
-
             </video>
             </MotionAnimate>
         </div>
         <div className="wrapper">
             <div className="tip">
                 <img
+                className="health-image"
                 src="/assets/images/food/assortment-of-colorful-ripe-tropical-fruits-top-royalty-free-image-995518546-1564092355.jpg"
                 alt="First tip"
                 />
