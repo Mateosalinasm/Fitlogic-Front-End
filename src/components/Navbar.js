@@ -1,7 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
-import { MotionAnimate } from "react-motion-animate";
 import Backdrop from "./BackDrop.js";
 import React from "react";
 
@@ -40,9 +39,10 @@ const Navbar = ({ activePage, onLinkClick }) => {
                     <img
                     className="search"
                     src="/assets/images/icons/magnifying-glass (1).png"
+                    alt="search"
                     />
-                    <form id="search" action="/">
-                    <input type="text" />
+                    <form id="search" action="/" >
+                    <input type="text" placeholder="Search"/>
                     </form>
                 </div>
                 <AnimatePresence>

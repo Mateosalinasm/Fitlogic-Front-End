@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Video from "../components/WelcomeVideo";
 import WorkoutBanner from "../components/WorkoutBanner";
 import { MotionAnimate } from "react-motion-animate";
@@ -12,7 +11,6 @@ const Home = () => {
         delay={1}
         speed={1}
         ease={[0.75, 0.45, 0.53, 0.94]}
-        reset={true}
         >
         <Video />
         </MotionAnimate>
