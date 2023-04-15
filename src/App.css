@@ -274,7 +274,7 @@ a {
 
 li {
   line-height: 60px;
-    opacity: 60%;
+  /* opacity: 60%; */
 }
 
 li:hover {
@@ -283,8 +283,8 @@ li:hover {
 }
 
 li:hover {
-  border-bottom: 1px solid rgb(139, 139, 139);
-  opacity: 100%;
+  /* border-bottom: 1px solid rgb(139, 139, 139); */
+  /* opacity: 100%; */
 
 }
 
