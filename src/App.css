@@ -193,11 +193,20 @@ transform: translate(30px, 20px) scale(1.1);
   /* border: 5px solid black; */
 }
 
-.motivational-banner-container {
+/* .motivational-banner-container {
   display: flex;
   flex-direction: row;
   margin-left: 3rem;
+} */
+
+.motivational-banner-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
+
+
 
 .motivational-banner {
   color: white;
@@ -205,22 +214,23 @@ transform: translate(30px, 20px) scale(1.1);
   text-align: left;
   height: 30rem;
   width: 60vw;
-  background-color: rgba(86, 85, 85, 0.1);
+  /* background-color: rgba(86, 85, 85, 0.1); */
   border-radius: 10px;
   padding-left: 3rem;
 
 }
-
 .banner-image {
-  display: flex;
   position: relative;
-  border-radius: 10px;
-  width: 45vw;
+  width: 38vw;
   height: auto;
-  top: 2rem;
-  left: -3rem;
+  border-radius: 10px;
+  margin-right: 20px; 
+  transition: transform 0.2s ease-in-out;
 }
 
+.banner-image:hover {
+  transform: scale(1.1);
+}
 .title {
   font-family: 'Poppins', sans-serif;
   font-size: 3rem;
@@ -228,10 +238,21 @@ transform: translate(30px, 20px) scale(1.1);
 }
 
 .motivational-quote {
-  font-size: 2rem;
+  font-size: 20px;
   width: 500px;
   font-family: Kaushan Script;
+  transition: transform 0.2s ease-in-out;
 }
+
+.motivational-quote:hover {
+  position: relative;
+  height: auto;
+  width: fit-content;
+  box-shadow: 1px 4px 40px black;
+  transform: translate(-30px, 20px) scale(1.1);
+}
+
+
 
 ul {
     list-style: none;
