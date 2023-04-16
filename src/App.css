@@ -382,10 +382,106 @@ li:hover {
   position: relative;
   width: 45rem;
   height: 35rem;
-
 }
 
+.sign-in-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
+.sign-in {
+  width: 700px;
+  height: 700px;
+  border-radius: 30px;
+  /* background-image: url("/assets/images/icons/Untitled design (3).png") ; */
+  z-index: 1;
+  /* box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5); */
+  box-shadow: 10px 1px 90px black;
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+i.size {
+  width: 3rem;
+}
+.sign-in-background {
+  position: absolute;
+  /* opacity: 50%; */
+}
+
+.sign-up-title {
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 70px;
+    color: #A7FA38;
+    text-shadow: 5px 8px 10px black;
+    margin-bottom: -60px;
+    transform: translateZ(20px);
+    z-index: 1;
+}
+
+input.sign-up-inputs {
+  padding: 5px;
+  margin: 10px;
+  border-radius: 0;
+  border-bottom: 1px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;   
+  box-shadow: none;
+  font-size: 2rem;
+  width: 18vw;
+  color: #121212;
+  z-index: 1;
+}
+
+input.sign-up-inputs::placeholder {
+  color: #f7fe28;
+  text-shadow: 2px 2px 5px black;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  margin-bottom: 2rem;
+}
+
+/* .login-btns-no-user {
+    display: flex;
+    position: relative;
+    top: -155px;
+    justify-content: space-evenly;
+    flex-direction: row;
+} */
+
+.login-btns {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding-top: 8.5rem;
+    z-index: 1;
+}
+
+.req-btn {
+    height: 50px;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    /* color: rgba(91, 91, 40); */
+    background-color:#A7FA38;
+    border: 1px solid #121212; 
+    border-radius: 30px; 
+    font-size: 22px;
+    font-weight: 500;
+    z-index: 1;
+}
 
 /* ------------------------------------------------------------------------------ */
 
