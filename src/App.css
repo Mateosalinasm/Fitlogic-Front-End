@@ -409,7 +409,8 @@ i.size {
 }
 .sign-in-background {
   position: absolute;
-  /* opacity: 50%; */
+  width: 100vw;
+    height: 100vh
 }
 
 .sign-up-title {
@@ -429,7 +430,7 @@ input.sign-up-inputs {
   padding: 5px;
   margin: 10px;
   border-radius: 0;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -437,12 +438,12 @@ input.sign-up-inputs {
   box-shadow: none;
   font-size: 2rem;
   width: 18vw;
-  color: #121212;
+  color: white;
   z-index: 1;
 }
 
 input.sign-up-inputs::placeholder {
-  color: #f7fe28;
+  color: white;
   text-shadow: 2px 2px 5px black;
 }
 
@@ -466,7 +467,6 @@ fieldset {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
-    padding-top: 8.5rem;
     z-index: 1;
 }
 
@@ -476,11 +476,25 @@ fieldset {
     font-family: 'Poppins', sans-serif;
     /* color: rgba(91, 91, 40); */
     background-color:#A7FA38;
-    border: 1px solid #121212; 
+    border: 2px solid #121212; 
     border-radius: 30px; 
     font-size: 22px;
     font-weight: 500;
     z-index: 1;
+}
+
+.sign-in-logo {
+  margin-top: 3rem ;
+  margin-bottom: -1rem;
+  width: 20rem;
+  filter: drop-shadow(10px 10px 10px black);
+  z-index: 1;
+}
+
+.sign-in-logo:hover {
+  /* filter: contrast(15%); */
+  filter: drop-shadow(50px 50px 50px black);
+  transition: .1s;
 }
 
 /* ------------------------------------------------------------------------------ */
