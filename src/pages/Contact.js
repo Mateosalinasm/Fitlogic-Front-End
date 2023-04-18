@@ -10,7 +10,7 @@ const Contact = () => {
 
   if (submitted) {
     return (
-        <img className='wrapper-message' src="/assets/FitLogic-contactusmessage.gif" alt="Thank you for your message" />
+        <img className='wrapper-message' src="/assets/images/FitLogic-contactusmessage.gif" alt="Thank you for your message" />
     );
   }
 
@@ -34,7 +34,7 @@ const Contact = () => {
           <button class="submit">Submit</button>
          </div>
         </form>
-        <img className='form-image' src="/assets/contact-us.jpg" alt="Contact us" />
+        <img className='form-image' src="/assets/images/contact-us.jpg" alt="Contact us" />
       </div>
     </div>
   );
