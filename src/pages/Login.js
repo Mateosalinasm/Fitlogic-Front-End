@@ -17,6 +17,11 @@ const LogIn = () => {
                 <Link to="/">
                     <h1 className="sign-in-fitlogic">FITLOGIC</h1>
                 </Link>
+                <video className="sign-in-background" src="/assets/images/videos/1440 wave (4).mp4" 
+                autoPlay
+                loop
+                muted
+                ></video>
             {/* <img className="sign-in-background" src="/assets/images/icons/Untitled design (5).png" alt="" /> */}
             <div data-tilt data-tilt-scale="1.01" data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.5" className="sign-in">
                 <div>

@@ -3,6 +3,8 @@ import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import Backdrop from "./BackDrop.js";
 import React from "react";
+import axios from 'axios';
+// const axios = require("axios");
 
 const Navbar = ({ activePage, onLinkClick, props }) => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -26,13 +28,30 @@ const Navbar = ({ activePage, onLinkClick, props }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        fetch(`https://exerciseapi3.p.rapidapi.com/search/?q=${searchData.searchterm}`)
-            .then(response => response.json())
-            .then(data => {
-                // Do something with the search results
-                console.log(data)
-            })
-            .catch(error => console.error(error));
+        console.log(searchData.searchterm); // log the search term
+        // fetch(`https://exerciseapi3.p.rapidapi.com/search/?q=${searchData.searchterm}`)
+        //     .then(response => response.json())
+        //     .then(data => {
+        //          Do something with the search results
+        //         console.log(data)
+        //     })
+        //     .catch(error => console.error(error));
+        const options = {
+        method: 'GET',
+        url: 'https://exerciseapi3.p.rapidapi.com/search/',
+        params: {name: 'Barbell Bench Press'},
+        headers: {
+            'X-RapidAPI-Key': '9168c08a04mshd59d5bf2ae0ecbbp1b6982jsne6cb3710a0e5',
+            'X-RapidAPI-Host': 'exerciseapi3.p.rapidapi.com'
+        }
+        };
+
+        axios.request(options)
+        .then(function (response) {
+            console.log(response.data);
+        }).catch(function (error) {
+            console.error(error);
+        });
     };
 
 

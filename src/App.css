@@ -387,26 +387,29 @@ li:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 100%; */
 }
 
 .sign-in {
   width: 700px;
   height: 700px;
   border-radius: 30px;
-  /* background-image: url("/assets/images/icons/Untitled design (3).png") ; */
   z-index: 1;
-  /* box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5); */
   box-shadow: 10px 1px 90px black;
   border-left: 2px solid rgba(255, 255, 255, 0.5);
   border-top: 2px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(4px);
+  position: relative;
+  top: 8rem
+
 }
 
 .sign-in-background {
-  position: absolute;
-  width: 100vw;
-    height: 100vh
+    position: absolute;
+    width: 100vw;
+    height: 128vh;
+    overflow: hidden;
+    object-fit: cover;
 }
 
 .sign-in-title {
@@ -707,5 +710,8 @@ transform: translate(-30px, 20px) scale(1.1);
   }
 
 }
+
+
+
 
 
