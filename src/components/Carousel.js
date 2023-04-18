@@ -21,17 +21,17 @@ const Carousel = ({ slides }) => {
         return () => clearInterval(intervalId);
     }, [currentImage, slides]);
 
-    const previous = () => {
-        const isFirstSlide = currentImage === 0;
-        const newImage = isFirstSlide ? slides.length - 1 : currentImage - 1;
-        setCurrentImage(newImage);
-    };
+    // const previous = () => {
+    //     const isFirstSlide = currentImage === 0;
+    //     const newImage = isFirstSlide ? slides.length - 1 : currentImage - 1;
+    //     setCurrentImage(newImage);
+    // };
 
-    const next = () => {
-        const isLastSlide = currentImage === slides.length - 1;
-        const newImage = isLastSlide ? 0 : currentImage + 1;
-        setCurrentImage(newImage);
-    };
+    // const next = () => {
+    //     const isLastSlide = currentImage === slides.length - 1;
+    //     const newImage = isLastSlide ? 0 : currentImage + 1;
+    //     setCurrentImage(newImage);
+    // };
 
     return (
         <div className="carousel-container">

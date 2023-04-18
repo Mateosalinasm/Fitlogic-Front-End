@@ -4,7 +4,7 @@ import { useState } from "react";
 import Backdrop from "./BackDrop.js";
 import React from "react";
 
-const Navbar = ({ activePage, onLinkClick }) => {
+const Navbar = ({ activePage, onLinkClick, props }) => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -14,6 +14,27 @@ const Navbar = ({ activePage, onLinkClick }) => {
     const handleLinkClick = () => {
         setMenuOpen(false);
     };
+
+    const [searchData, setSearchData] = React.useState({
+        searchterm: "",
+    });
+
+    const handleChange = (event) => {
+        //use the event object to detect key and value to update
+        setSearchData({ ...searchData, [event.target.name]: event.target.value });
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        fetch(`https://exerciseapi3.p.rapidapi.com/search/?q=${searchData.searchterm}`)
+            .then(response => response.json())
+            .then(data => {
+                // Do something with the search results
+                console.log(data)
+            })
+            .catch(error => console.error(error));
+    };
+
 
     return (
         <div className="container">
@@ -41,8 +62,13 @@ const Navbar = ({ activePage, onLinkClick }) => {
                     src="/assets/images/icons/magnifying-glass (1).png"
                     alt="search"
                     />
-                    <form id="search" action="/" >
-                    <input type="text" placeholder="Search"/>
+                    <form id="search" onSubmit={handleSubmit} >
+                        <input 
+                        type="text" 
+                        placeholder="Search" 
+                        name="searchterm"
+                        onChange={handleChange}
+                        value={searchData.searchterm}/>
                     </form>
                 </div>
                 <AnimatePresence>
@@ -158,7 +184,7 @@ const Navbar = ({ activePage, onLinkClick }) => {
                         </li>
                         <li>
                             <NavLink
-                            to="/sign-in"
+                            to="/login"
                             onClick={handleLinkClick}
                             style={({ isActive, isPending }) => {
                                 return {
@@ -168,7 +194,7 @@ const Navbar = ({ activePage, onLinkClick }) => {
                                 opacity: isActive ? "100%" : "90%",
                                 };
                             }}>
-                                Sign in
+                                Log in
                             </NavLink>
                         </li>
                         </React.Fragment>
