@@ -25,16 +25,51 @@ const APIKEY = process.env.APIKEY;
 
     //=============Searches by excercise and shows info ========================
 
+    // const options = {
+    //   method: 'GET',
+    //   url: 'https://exerciseapi3.p.rapidapi.com/search/',
+    //   params: {name: 'Barbell Bench Press'}, //search params
+    //   headers: {
+    //     'X-RapidAPI-Key': APIKEY,
+    //     'X-RapidAPI-Host': 'exerciseapi3.p.rapidapi.com'
+    //   }
+    // };
+    
+    // function capitalizeFirstLetter(string) {
+    //   const options = {
+    //     method: 'GET',
+    //     url: 'https://exerciseapi3.p.rapidapi.com/search/',
+    //     params: {name: 'Barbell Bench Press'},
+    //     headers: {
+    //       'X-RapidAPI-Key': APIKEY,
+    //       'X-RapidAPI-Host': 'exerciseapi3.p.rapidapi.com'
+    //     }
+    //   };
+    //   const searchName = params.name;
+    //   return string.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+    // }
+    
+    // console.log(capitalizeFirstLetter(searchName));
+    
+
+    function capitalizeFirstLetter(string) {
+      return string.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+    }
+    
     const options = {
       method: 'GET',
       url: 'https://exerciseapi3.p.rapidapi.com/search/',
-      params: {primaryMuscle: 'pectoralis major'}, //search params
+      params: {name: 'Barbell bench Press'},
       headers: {
         'X-RapidAPI-Key': APIKEY,
         'X-RapidAPI-Host': 'exerciseapi3.p.rapidapi.com'
       }
     };
     
+    const name = options.params.name;
+    console.log(capitalizeFirstLetter(name));
+    
+
 
     //===================Original Request===========================
     // axios.request(options).then(function (response) {
@@ -45,20 +80,20 @@ const APIKEY = process.env.APIKEY;
     
     //=============Requests an exercise for param muscle at random ========================
 
-    axios.request(options).then(function (response) {
+    // axios.request(options).then(function (response) {
       
-      if (response.data && response.data.length > 0) {
-        const randomIndex = Math.floor(Math.random() * response.data.length);
-        const randomExercise = response.data[randomIndex];
-        console.log(randomExercise);
-      } else {
-        console.log("No valid exercises found.");
-      }
+    //   if (response.data && response.data.length > 0) {
+    //     const randomIndex = Math.floor(Math.random() * response.data.length);
+    //     const randomExercise = response.data[randomIndex];
+    //     console.log(randomExercise);
+    //   } else {
+    //     console.log("No valid exercises found.");
+    //   }
     
   
-    }).catch(function (error) {
-      console.error(error);
-    });
+    // }).catch(function (error) {
+    //   console.error(error);
+    // });
     
   //   export default axios.create({
   //     baseURL: PORT

@@ -4,8 +4,10 @@ import { useState } from "react";
 import Backdrop from "./BackDrop.js";
 import React from "react";
 
+
 const Navbar = ({ activePage, onLinkClick }) => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [searchQuery, setSearchQuery] = useState("");
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -13,6 +15,10 @@ const Navbar = ({ activePage, onLinkClick }) => {
 
     const handleLinkClick = () => {
         setMenuOpen(false);
+    };
+
+    const handleSearchQueryChange = (event) => {
+        setSearchQuery(event.target.value);
     };
 
     return (
@@ -35,16 +41,16 @@ const Navbar = ({ activePage, onLinkClick }) => {
                     </motion.button>
                 </div>
                 <div className="menu-container">
-                <div className="form-container">
-                    <img
-                    className="search"
-                    src="/assets/images/icons/magnifying-glass (1).png"
-                    alt="search"
-                    />
-                    <form id="search" action="/" >
-                    <input type="text" placeholder="Search"/>
-                    </form>
-                </div>
+                    <div className="form-container">
+                        <img
+                            className="search"
+                            src="/assets/images/icons/magnifying-glass (1).png"
+                            alt="search"
+                        />
+                        <form id="search" action="/">
+                            <input type="text" placeholder="Search Primary Muscle" value={searchQuery} onChange={handleSearchQueryChange} />
+                        </form>
+                    </div>
                 <AnimatePresence>
                     {menuOpen && (
                     <Backdrop

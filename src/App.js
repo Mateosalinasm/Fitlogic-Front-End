@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import SignIn from "./pages/SignIn";
 import Register from "./pages/Register.js";
 
+
 import "./App.css";
 
 function App() {
