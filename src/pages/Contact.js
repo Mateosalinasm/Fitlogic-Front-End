@@ -9,7 +9,7 @@ const Contact = () => {
   };
      
   if (submitted) {
-    return <p className="wrapper-message">Thank you for your message,we will get back to you ASAP</p>;
+    return <img className="wrapper-message" src='/assets/FitLogic-contactusmessage.gif'></img>;
   }
 
   return (
