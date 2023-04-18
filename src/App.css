@@ -303,7 +303,6 @@ ul {
   font-size: 35px;
   text-align: left;
   transition: 1s;
-  line-height: 45px;
   background-color: rgba(27, 26, 26, 0.92);
   padding: 30px;
   border-radius: 30px;
@@ -315,7 +314,7 @@ a {
   text-decoration: none;
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
-  
+  padding-bottom: 3px;
 }
 
 .tip {
@@ -404,29 +403,26 @@ li:hover {
   backdrop-filter: blur(4px);
 }
 
-i.size {
-  width: 3rem;
-}
 .sign-in-background {
   position: absolute;
   width: 100vw;
     height: 100vh
 }
 
-.sign-up-title {
-    display: flex;
-    justify-content: center;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 70px;
-    color: #A7FA38;
-    text-shadow: 5px 8px 10px black;
-    margin-bottom: -60px;
-    transform: translateZ(20px);
-    z-index: 1;
+.sign-in-title {
+  display: flex;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 70px;
+  color: #A7FA38;
+  text-shadow: 5px 8px 10px black;
+  margin-bottom: -60px;
+  transform: translateZ(20px);
+  z-index: 1;
 }
 
-input.sign-up-inputs {
+input.sign-in-inputs {
   padding: 5px;
   margin: 10px;
   border-radius: 0;
@@ -442,7 +438,7 @@ input.sign-up-inputs {
   z-index: 1;
 }
 
-input.sign-up-inputs::placeholder {
+input.sign-in-inputs::placeholder {
   color: white;
   text-shadow: 2px 2px 5px black;
 }
@@ -464,29 +460,29 @@ fieldset {
 } */
 
 .login-btns {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    z-index: 1;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  z-index: 1;
 }
 
 .req-btn {
-    height: 50px;
-    color: black;
-    font-family: 'Poppins', sans-serif;
-    /* color: rgba(91, 91, 40); */
-    background-color:#A7FA38;
-    border: 2px solid #121212; 
-    border-radius: 30px; 
-    font-size: 22px;
-    font-weight: 500;
-    z-index: 1;
+  height: 50px;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  /* color: rgba(91, 91, 40); */
+  background-color:#A7FA38;
+  border: 2px solid #121212; 
+  border-radius: 30px; 
+  font-size: 22px;
+  font-weight: 500;
+  z-index: 1;
 }
 
 .sign-in-logo {
   margin-top: 3rem ;
   margin-bottom: -1rem;
-  width: 20rem;
+  width: 18rem;
   filter: drop-shadow(10px 10px 10px black);
   z-index: 1;
 }
@@ -495,6 +491,22 @@ fieldset {
   /* filter: contrast(15%); */
   filter: drop-shadow(50px 50px 50px black);
   transition: .1s;
+}
+
+.sign-in-fitlogic {
+  position: absolute;
+  color: white;
+  top: 0;
+  left: 3rem;
+  z-index: 2;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 3px 3px 5px black;
+  font-size: 2.2rem;
+}
+
+.sign-in-fitlogic:hover {
+  transform: scale(1.05);
+  transition: .3s;
 }
 
 /* ------------------------------------------------------------------------------ */
