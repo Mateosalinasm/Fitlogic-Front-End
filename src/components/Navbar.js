@@ -41,8 +41,7 @@ const Navbar = ({ activePage, onLinkClick, props }) => {
         url: 'https://exerciseapi3.p.rapidapi.com/search/',
         params: {name: 'Barbell Bench Press'},
         headers: {
-            'X-RapidAPI-Key': '9168c08a04mshd59d5bf2ae0ecbbp1b6982jsne6cb3710a0e5',
-            'X-RapidAPI-Host': 'exerciseapi3.p.rapidapi.com'
+            
         }
         };
 
