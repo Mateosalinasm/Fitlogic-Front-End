@@ -3,6 +3,12 @@ import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import Backdrop from "./BackDrop.js";
 import React from "react";
+import SearchBar from "./SearchBar";
+const axios = require("axios");
+const API  = process.env.REACT_APP_API;
+const APIKEY = process.env.REACT_APP_APIKEY;
+
+
 
 const Navbar = ({ activePage, onLinkClick, props }) => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -35,6 +41,7 @@ const Navbar = ({ activePage, onLinkClick, props }) => {
             })
             .catch(error => console.error(error));
     };
+    
 
 
     return (
@@ -57,21 +64,7 @@ const Navbar = ({ activePage, onLinkClick, props }) => {
                     </motion.button>
                 </div>
                 <div className="menu-container">
-                <div className="form-container">
-                    <img
-                    className="search"
-                    src="/assets/images/icons/magnifying-glass (1).png"
-                    alt="search"
-                    />
-                    <form id="search" onSubmit={handleSubmit} >
-                        <input 
-                        type="text" 
-                        placeholder="Search" 
-                        name="searchterm"
-                        onChange={handleChange}
-                        value={searchData.searchterm}/>
-                    </form>
-                </div>
+                <SearchBar setSearchQuery={setSearchQuery} />
                 <AnimatePresence>
                     {menuOpen && (
                     <Backdrop
