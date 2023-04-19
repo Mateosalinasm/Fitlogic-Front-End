@@ -8,20 +8,16 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login.js";
 import Register from "./pages/Register.js";
-import SearchBar  from "./components/SearchBar.js";
-// require('dotenv').config();
-
+import ResultPage from "./pages/ResultPage.js";
 import "./App.css";
 
 function App() {
   const location = useLocation();
-  // Check if current location is the sign-in page
   const isSignInPage = location.pathname === "/login";
   const isRegisterPage = location.pathname === "/register";
 
   return (
     <div className="App">
-      {/* Render Navbar only if not on the sign-in or register page */}
       {!isSignInPage && !isRegisterPage && <Navbar />}
       <nav className={isSignInPage || isRegisterPage ? null : "fade"}></nav>
       <Routes>
@@ -33,6 +29,12 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        {/* <Route
+          path="/results"
+          element={<ResultPage searchResults={location.state?.searchResults || []} />}
+        /> */}
+        <Route path="/results" element={<ResultPage />} />
+
       </Routes>
     </div>
   );
