@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import test from "../secret";
+import API from "../secret";
 
 function SearchBar() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -28,7 +28,7 @@ function SearchBar() {
     url: 'https://exerciseapi3.p.rapidapi.com/search/',
     params: {name: `${searchQuery}`},
     headers: {
-      'X-RapidAPI-Key': `API`, // Replace with actual API
+      'X-RapidAPI-Key': `${API}`, // Replace with actual API
       'X-RapidAPI-Host': 'exerciseapi3.p.rapidapi.com'
     }
   };
