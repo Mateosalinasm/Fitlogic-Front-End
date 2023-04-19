@@ -32,7 +32,7 @@ const LogIn = () => {
                             <form id="log-in-form" >
                                 <fieldset className="account-info">
                                     <input placeholder="USERNAME" className="sign-in-inputs" name="username" type="text" />
-                                    <input placeholder="PASSWORD" className="sign-in-inputs" name="password" type="password" />
+                                    <input placeholder="PASSWORD" className="sign-in-inputs" name="password" type="password" autoComplete="current-password"/>
                                 </fieldset>
                             </form>
                         </div>
