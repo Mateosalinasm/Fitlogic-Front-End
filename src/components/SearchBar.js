@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import test from "../secret";
 
 function SearchBar() {
   const [searchQuery, setSearchQuery] = useState("");
