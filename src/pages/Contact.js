@@ -10,7 +10,10 @@ const Contact = () => {
 
   if (submitted) {
     return (
-        <img className='wrapper-message' src="/assets/images/FitLogic-contactusmessage.gif" alt="Thank you for your message" />
+        <video className='wrapper-message' src="/assets/images/FitLogic-contactusmessage.mp4" 
+        autoPlay
+        loop
+        muted> </video>
     );
   }
 
