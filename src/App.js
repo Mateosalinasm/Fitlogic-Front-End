@@ -8,8 +8,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login.js";
 import Register from "./pages/Register.js";
-
-
+import SearchBar  from "./components/SearchBar.js";
 // require('dotenv').config();
 
 import "./App.css";

@@ -3,11 +3,16 @@ import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import Backdrop from "./BackDrop.js";
 import React from "react";
-import axios from 'axios';
-// const axios = require("axios");
+import SearchBar from "./SearchBar";
+const axios = require("axios");
+const API  = process.env.REACT_APP_API;
+const APIKEY = process.env.REACT_APP_APIKEY;
+
+
 
 const Navbar = ({ activePage, onLinkClick, props }) => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [searchQuery, setSearchQuery] = useState("");
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -41,8 +46,7 @@ const Navbar = ({ activePage, onLinkClick, props }) => {
         url: 'https://exerciseapi3.p.rapidapi.com/search/',
         params: {name: 'Barbell Bench Press'},
         headers: {
-            'X-RapidAPI-Key': '9168c08a04mshd59d5bf2ae0ecbbp1b6982jsne6cb3710a0e5',
-            'X-RapidAPI-Host': 'exerciseapi3.p.rapidapi.com'
+
         }
         };
 
@@ -53,6 +57,7 @@ const Navbar = ({ activePage, onLinkClick, props }) => {
             console.error(error);
         });
     };
+    
 
 
     return (
@@ -75,21 +80,7 @@ const Navbar = ({ activePage, onLinkClick, props }) => {
                     </motion.button>
                 </div>
                 <div className="menu-container">
-                <div className="form-container">
-                    <img
-                    className="search"
-                    src="/assets/images/icons/magnifying-glass (1).png"
-                    alt="search"
-                    />
-                    <form id="search" onSubmit={handleSubmit} >
-                        <input 
-                        type="text" 
-                        placeholder="Search" 
-                        name="searchterm"
-                        onChange={handleChange}
-                        value={searchData.searchterm}/>
-                    </form>
-                </div>
+                <SearchBar setSearchQuery={setSearchQuery} />
                 <AnimatePresence>
                     {menuOpen && (
                     <Backdrop
