@@ -21,6 +21,8 @@ import Smoking from "./pages/Tips/Smoking.js";
 import Social from "./pages/Tips/Social.js";
 import Hygiene from "./pages/Tips/Hygiene.js";
 
+
+
 function App() {
   const [dataState, setDataState] = useState(() => null)
   const location = useLocation();
@@ -50,10 +52,10 @@ useEffect(() =>{
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
-        <Route
-          path="/results"
-          element={<ResultPage searchResults={location.state?.searchResults || []} />}
-        /> 
+         <Route
+           path="/results"
+           element={<ResultPage dataState={dataState} />}
+         />
         <Route path="/results" element={<ResultPage />} />
         <Route path="/tips/diet" element={<Diet />} />
         <Route path="/tips/hydration" element={<Hydration />} />
