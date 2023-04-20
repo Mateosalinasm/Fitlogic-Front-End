@@ -47,9 +47,9 @@ const TipsArr = [
         conclusion: 'In conclusion, staying hydrated is essential for our bodies to function properly. By incorporating these tips and tricks into your daily routine, you can ensure that you are getting enough fluids throughout the day and maintaining optimal health. Remember to drink plenty of water, eat foods with high water content, set reminders, carry a water bottle, and limit alcohol and caffeine intake to stay hydrated and feel your best.'
     },
     {
-        title: 'The Benefits of Regular Exercise: Tips and Tricks for Incorporating Physical Activity into Your Daily Routine',
+        title: 'The Benefits of Regular Exercise: Tips and Tricks For Living An Active Life',
         description: 'Regular exercise is essential for maintaining good health and well-being. Learn about the benefits of engaging in physical activity for at least 30 minutes a day and get tips and tricks for incorporating exercise into your daily routine.',
-        image: '',
+        image: '/assets/images/workout/pexels-yaroslav-shuraev-8692269.jpg',
         paragraph1: 'Regular exercise is essential for maintaining good health and well-being. Engaging in physical activity for at least 30 minutes a day can provide numerous benefits for our bodies and minds. In this article, we will discuss the benefits of regular exercise, provide tips and tricks for incorporating physical activity into your daily routine, and offer advice for maintaining an active lifestyle.',
         question: 'Why is exercising important?',
         mainAnswer: 'Regular exercise is important for maintaining overall health and well-being. It can help improve cardiovascular health, increase muscle strength and endurance, reduce the risk of chronic diseases like heart disease and diabetes, and improve mental health by reducing symptoms of anxiety and depression. Exercise also helps to maintain a healthy body weight and can improve sleep quality. Incorporating physical activity into your daily routine can lead to a happier, healthier life.',
@@ -58,6 +58,7 @@ const TipsArr = [
         benefit1: 'Improved physical health: Regular exercise can help improve cardiovascular health, maintain a healthy body weight, and reduce the risk of chronic diseases like heart disease, diabetes, and certain cancers.',
         benefit2: 'Improved mental health: Regular exercise can help reduce stress, anxiety, and symptoms of depression. It can also improve cognitive function and boost self-esteem.',
         benefit3: 'Increased energy levels: Regular exercise can help improve energy levels by reducing fatigue and improving sleep quality.',
+        benefit4: 'Increased muscle strength and flexibility: Exercise helps build and maintain muscle mass and improve flexibility, reducing the risk of injury.',
         tipsAndTricks: 'Tips and Tricks for Incorporating Physical Activity into Your Daily Routine',
         tipOverview: 'Incorporating physical activity into your daily routine can seem challenging at first, but it doesn\'t have to be. Here are some tips and tricks for getting started:',
         tip: 'Find an activity you enjoy: Engage in physical activity that you enjoy, whether it be through aerobic exercise, strength training, or other forms of activity. This will make it easier to stick to your exercise routine.',
@@ -67,11 +68,12 @@ const TipsArr = [
         conclusion: 'Incorporating regular exercise into your daily routine can provide numerous benefits for your physical and mental health. By finding an activity you enjoy, starting small, and making it a habit, you can incorporate physical activity into your life and enjoy the many benefits that come with an active lifestyle. Remember, every little bit of activity counts, so start small and work your way up to a healthier, more active lifestyle.'
     },
     {
-        title: 'Getting Enough Sleep: Tips and Tricks for Optimal Health',
+        title: 'Getting Enough Sleep: Tips and Tricks for Optimal Rest',
         description: 'Getting enough sleep is crucial for our bodies to recover and recharge. Learn about the benefits of a good night\'s sleep and get tips and tricks for optimizing your sleep for optimal health.',
-        image: '',
+        image: '/assets/images/sleep (1).png',
         paragraph1: 'Getting enough sleep is essential for our overall health and well-being. It allows our bodies to recover and recharge, and is vital for our physical and mental health. In this article, we will discuss the benefits of getting enough sleep, provide tips and tricks for optimizing your sleep, and offer advice for maintaining optimal health.',
-        benefits: 'The Importance of Getting Enough Sleep',
+        question: 'Why is Sleep Important',
+        benefits: 'Benefits of Getting Enough Sleep',
         benefitsOverview: 'Getting enough sleep is crucial for our bodies to function properly. Sleep is essential for many aspects of our health and well-being, including:',
         benefit1: 'Restoring energy: Sleep is essential for restoring energy levels and helping us feel refreshed and alert.',
         benefit2: 'Improving mood: A good night\'s sleep can help improve our mood and reduce feelings of irritability and stress.',
@@ -79,7 +81,7 @@ const TipsArr = [
         benefit4: 'Reducing inflammation: Chronic lack of sleep can lead to inflammation in the body, which can increase the risk of chronic diseases like diabetes and heart disease.',
         tipsAndTricks: 'Tips and Tricks for Optimizing Your Sleep',
         tipOverview: 'Now that we know the importance of getting enough sleep, let\'s discuss some tips and tricks for optimizing your sleep:',
-        tip: 'Stick to a sleep schedule: Try to go to bed and wake up at the same time every day, even on weekends.',
+        tip: 'To improve sleep, maintain a consistent schedule, create a relaxing bedtime routine and environment, avoid stimulating activities, limit caffeine and alcohol, exercise regularly, and manage stress.',
         tip2: 'Create a relaxing bedtime routine: Create a calming bedtime routine to help you wind down before sleep. This may include reading, taking a bath, or practicing meditation or deep breathing exercises.',
         tip3: 'Create a comfortable sleep environment: Ensure that your bedroom is cool, quiet, and comfortable. Invest in a good quality mattress and pillows.',
         tip4: 'Limit screen time before bed: Avoid using electronic devices for at least an hour before bed, as the blue light emitted by screens can interfere with sleep.',
@@ -89,8 +91,9 @@ const TipsArr = [
     {
         title: 'Stress Management: Tips and Techniques for a Healthier Life',
         description: 'Stress can negatively impact our physical and mental health. Learn about the benefits of stress management and discover tips and techniques for reducing stress and living a healthier life.',
-        image: '',
+        image: '/assets/images/stress.png',
         paragraph1: 'In today\'s fast-paced world, stress is a common experience for many of us. While a little bit of stress can be motivating, chronic stress can negatively impact our physical and mental health. Learning to manage stress is crucial for maintaining our overall well-being. In this article, we will discuss the importance of stress management, provide tips and techniques for reducing stress, and offer advice for living a healthier life.',
+        question: 'Why Do We Need to Manage Our Stress',
         benefits: 'The Importance of Stress Management',
         benefitsOverview: 'Chronic stress can lead to a range of health problems, including high blood pressure, heart disease, anxiety, depression, and more. By learning to manage stress, we can reduce the negative impact it has on our bodies and minds. Some of the benefits of stress management include:',
         benefit1: 'Improved physical health: Reducing stress can help lower our blood pressure, improve our immune system, and reduce the risk of chronic diseases.',
@@ -107,9 +110,9 @@ const TipsArr = [
         conclusion: 'In conclusion, stress is a common experience in our lives, but learning to manage stress is essential for our physical and mental health. By incorporating these tips and techniques into your daily routine, you can reduce the negative impact of stress on your life and improve your overall well-being. Remember to practice mindfulness, exercise regularly, get enough sleep, prioritize self-care, and seek support to manage stress and live a healthier life.'
     },
     {
-        title: 'Limiting Alcohol Intake: Tips for a Healthier Lifestyle',
+        title: 'Limiting Alcohol : Tips for Lowering Alcohol Consumption',
         description: 'Drinking alcohol in moderation, if at all, is important for maintaining a healthy lifestyle. Learn about the risks associated with excessive alcohol consumption and get tips for limiting your intake.',
-        image: '',
+        image: '/assets/images/alcohol (1).png',
         paragraph1: 'Limiting alcohol intake is an important aspect of maintaining a healthy lifestyle. While moderate alcohol consumption may have some health benefits, excessive drinking can lead to serious health risks, including liver damage, high blood pressure, and certain types of cancer. In this article, we will discuss the importance of limiting alcohol intake and provide tips for drinking responsibly.',
         question: 'The Importance of Limiting Alcohol Intake',
         mainAnswer: 'Alcohol is a depressant that affects the central nervous system, and excessive consumption can lead to a range of negative health effects. Some of the risks associated with excessive alcohol consumption include:',

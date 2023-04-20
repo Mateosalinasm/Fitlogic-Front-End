@@ -721,6 +721,37 @@ fieldset {
   font-style: italic;
 }
 
+.no-border{
+  border: none;
+}
+
+.right-rem {
+  margin-left: -4rem;
+}
+
+.inline {
+  display: flex;
+  gap: 3rem;
+
+}
+
+.top {
+  position: relative;
+  top: -4rem;
+}
+.left-rem {
+    margin-left: 3rem;
+}
+
+.up {
+  position: relative;
+  top: -22rem;
+}
+
+.bottom-fade {
+  -webkit-mask-image: -webkit-gradient(linear, left 85%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+
 /* ------------------------------------------------------------------------------ */
 
 @media screen and (max-width: 390px) {
