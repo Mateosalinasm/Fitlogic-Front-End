@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, redirect, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "./components/Navbar.js";
 import Home from "./pages/Home";
 import Workout from "./pages/Workout";
@@ -10,15 +10,28 @@ import Login from "./pages/Login.js";
 import Register from "./pages/Register.js";
 import ResultPage from "./pages/ResultPage.js";
 import "./App.css";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [dataState, setDataState] = useState(() => null)
   const location = useLocation();
+  const navigate = useNavigate()
   const isSignInPage = location.pathname === "/login";
   const isRegisterPage = location.pathname === "/register";
+  const handleData = (data) => {
+    console.log("Inside App.js")
+    console.log(data)
+    setDataState(data)
+}
 
+useEffect(() =>{
+  console.log("Changes took place")
+  if(dataState){
+  navigate("/results")}
+}, [dataState])
   return (
     <div className="App">
-      {!isSignInPage && !isRegisterPage && <Navbar />}
+      {!isSignInPage && !isRegisterPage && <Navbar handleData={handleData}/>}
       <nav className={isSignInPage || isRegisterPage ? null : "fade"}></nav>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -28,11 +41,11 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
-        {/* <Route
+        <Route
           path="/results"
-          element={<ResultPage searchResults={location.state?.searchResults || []} />}
-        /> */}
-        <Route path="/results" element={<ResultPage />} />
+          element={<ResultPage dataState={dataState} />}
+        />
+        {/* <Route path="/results" element={<ResultPage />} /> */}
         <Route path="/tip/diet" element={<Register />} />
         <Route path="/tip/hydration" element={<Register />} />
         <Route path="/tip/exercise" element={<Register />} />

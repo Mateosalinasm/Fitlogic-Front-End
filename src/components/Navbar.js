@@ -10,7 +10,7 @@ const APIKEY = process.env.REACT_APP_APIKEY;
 
 
 
-const Navbar = ({ activePage, onLinkClick, props }) => {
+const Navbar = (props) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState("");
 
@@ -60,6 +60,7 @@ const Navbar = ({ activePage, onLinkClick, props }) => {
     
 
 
+
     return (
         <div className="container">
             <div className="navbar">
@@ -80,7 +81,7 @@ const Navbar = ({ activePage, onLinkClick, props }) => {
                     </motion.button>
                 </div>
                 <div className="menu-container">
-                <SearchBar setSearchQuery={setSearchQuery} />
+                <SearchBar setSearchQuery={setSearchQuery} handleData={props.handleData}/>
                 <AnimatePresence>
                     {menuOpen && (
                     <Backdrop
