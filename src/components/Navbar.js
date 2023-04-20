@@ -5,8 +5,8 @@ import Backdrop from "./BackDrop.js";
 import React from "react";
 import SearchBar from "./SearchBar";
 const axios = require("axios");
-const API  = process.env.REACT_APP_API;
-const APIKEY = process.env.REACT_APP_APIKEY;
+// const API  = process.env.REACT_APP_API;
+// const APIKEY = process.env.REACT_APP_APIKEY;
 
 
 
@@ -80,7 +80,13 @@ const Navbar = ({ activePage, onLinkClick, props }) => {
                     </motion.button>
                 </div>
                 <div className="menu-container">
+                    <img className="search" src="/assets/images/icons/magnifying-glass (1).png" />
                 <SearchBar setSearchQuery={setSearchQuery} />
+                {/* <div className="form-container"> */}
+                    {/* <form id="search" action="/"> */}
+                        {/* <input type="text" /> */}
+                    {/* </form> */}
+                {/* </div> */}
                 <AnimatePresence>
                     {menuOpen && (
                     <Backdrop
@@ -100,7 +106,7 @@ const Navbar = ({ activePage, onLinkClick, props }) => {
                     >
                     {menuOpen ? (
                         <React.Fragment>
-                        <li>
+                        <li className="navbar-link">
                             <NavLink
                             to="/"
                             onClick={handleLinkClick}
@@ -116,7 +122,7 @@ const Navbar = ({ activePage, onLinkClick, props }) => {
                                 Home
                             </NavLink>
                         </li>
-                        <li>
+                        <li className="navbar-link">
                             <NavLink
                             to="/workout"
                             onClick={handleLinkClick}
@@ -132,7 +138,7 @@ const Navbar = ({ activePage, onLinkClick, props }) => {
                                 Workouts
                             </NavLink>
                         </li>
-                        <li>
+                        <li className="navbar-link">
                             <NavLink
                             to="/addWorkout"
                             onClick={handleLinkClick}
@@ -147,7 +153,7 @@ const Navbar = ({ activePage, onLinkClick, props }) => {
                                 My Workout
                             </NavLink>
                         </li>
-                        <li>
+                        <li className="navbar-link">
                             <NavLink
                             to="/healthy-tips"
                             onClick={handleLinkClick}
@@ -162,7 +168,7 @@ const Navbar = ({ activePage, onLinkClick, props }) => {
                                 Healthy Tips
                             </NavLink>
                         </li>
-                        <li>
+                        <li className="navbar-link">
                             <NavLink
                             to="/contact"
                             onClick={handleLinkClick}
@@ -177,7 +183,7 @@ const Navbar = ({ activePage, onLinkClick, props }) => {
                                 Contact Us
                             </NavLink>
                         </li>
-                        <li>
+                        <li className="navbar-link">
                             <NavLink
                             to="/about"
                             onClick={handleLinkClick}
@@ -192,7 +198,7 @@ const Navbar = ({ activePage, onLinkClick, props }) => {
                                 About Us
                             </NavLink>
                         </li>
-                        <li>
+                        <li className="navbar-link">
                             <NavLink
                             to="/login"
                             onClick={handleLinkClick}

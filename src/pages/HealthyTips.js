@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import TipsArr from "../HealthTipsData";
 
 
-const HealthyTips = ({title}) => {
+const HealthyTips = () => {
     return (
     <>
         <div className="water-wrapper">

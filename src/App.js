@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login.js";
 import Register from "./pages/Register.js";
+import Diet from './pages/Tips/Diet.js'
 import SearchBar  from "./components/SearchBar.js";
 // require('dotenv').config();
 
@@ -32,14 +33,14 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/tip/diet" element={<Register />} />
-        <Route path="/tip/hydration" element={<Register />} />
-        <Route path="/tip/exercise" element={<Register />} />
-        <Route path="/tip/sleep" element={<Register />} />
-        <Route path="/tip/stress-management" element={<Register />} />
-        <Route path="/tip/alcohol" element={<Register />} />
-        <Route path="/tip/smoking" element={<Register />} />
-        <Route path="/tip/social-connection" element={<Register />} />
+        <Route path="/tips/diet" element={<Diet />} />
+        <Route path="/tips/hydration" element={<Register />} />
+        <Route path="/tips/exercise" element={<Register />} />
+        <Route path="/tips/sleep" element={<Register />} />
+        <Route path="/tips/stress-management" element={<Register />} />
+        <Route path="/tips/alcohol" element={<Register />} />
+        <Route path="/tips/smoking" element={<Register />} />
+        <Route path="/tips/social-connection" element={<Register />} />
       </Routes>
     </div>
   );

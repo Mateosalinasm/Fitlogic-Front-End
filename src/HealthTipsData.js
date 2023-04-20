@@ -17,7 +17,12 @@ const TipsArr = [
         benefit4: 'Stronger immune system: Eating a balanced diet can help strengthen our immune system by providing us with the vitamins, minerals, and antioxidants our bodies need to fight off infections and illnesses.',
         tipsAndTricks: 'Tips and Tricks for Incorporating a Balanced Diet into Your Lifestyle',
         tipOverview: 'Incorporating a balanced diet into your lifestyle can seem daunting at first, but it doesn\'t have to be. Here are some tips and tricks for getting started:',
-        tip: 'Plan ahead: Take some time each week to plan out your meals and snacks. This will help you stay on track and avoid making unhealthy choices when you\'re short on time.',
+        tip1: 'Plan ahead: Take some time each week to plan out your meals and snacks. This will help you stay on track and avoid making unhealthy choices when you\'re short on time.',
+        tip2: 'Eat a variety of foods: Include foods from all food groups such as fruits, vegetables, whole grains, lean proteins, and healthy fats to ensure you\'re getting all the nutrients your body needs.',
+        tip3: 'Choose whole foods: Whole foods are minimally processed and provide more nutrients than processed foods. Include foods like whole fruits, vegetables, nuts, seeds, and whole grains in your diet.',
+        tip4: 'Limit added sugars and salt: Too much added sugar and salt in your diet can increase your risk of chronic diseases. Try to limit your intake of sugary drinks, desserts, and processed foods.',
+        tip5: 'Pay attention to portion sizes: Eating too much of even healthy foods can lead to weight gain. Be mindful of portion sizes and eat until you feel comfortably full.',
+        tip6: 'Cook at home more often: When you cook at home, you can control the ingredients and ensure that you\'re eating healthy foods.',
         conclusion: 'In conclusion, eating a balanced diet is essential for maintaining good health and well-being. By incorporating a variety of fruits, vegetables, whole grains, lean proteins, and healthy fats into our diet, we can ensure that our bodies are getting all the nutrients they need to function properly. Eating a balanced diet can reduce the risk of chronic diseases, improve mood and energy levels, help with weight management, and strengthen the immune system.'
     },
     {
