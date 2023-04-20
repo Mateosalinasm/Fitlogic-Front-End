@@ -1,43 +1,43 @@
 import React, { useState } from "react";
 import API from "../secret";
+import { useNavigate } from "react-router-dom";
 
 function SearchBar() {
-const [searchQuery, setSearchQuery] = useState("");
-const [searchResults, setSearchResults] = useState([]);
-const [error, setError] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
 
-const handleSearch = async () => {
-    try {
-    const response = await fetch(
-        `https://exerciseapi3.p.rapidapi.com/search/?name=${searchQuery}`,
-        options
-    );
-    const data = await response.json();
-    console.log(data); // Log the data returned by the API
-    setSearchResults(data.results);
-    } catch (error) {
-    console.error(error);
-    setError("An error occurred while searching. Please try again later.");
-    }
-};
+  const handleSearch = () => {
+    const options = {
+      method: "GET",
+      url: "https://exerciseapi3.p.rapidapi.com/search/",
+      params: { name: `${searchQuery}` },
+      headers: {
+        "X-RapidAPI-Key": `${API}`,
+        "X-RapidAPI-Host": "exerciseapi3.p.rapidapi.com",
+      },
+    };
+  
+    fetch(`https://exerciseapi3.p.rapidapi.com/search/?name=${searchQuery}`, options)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        navigate('/results', { state: { searchResults: data.results } }); // pass searchResults as state
+      })
+      .catch(error => {
+        console.error(error);
+        setError(error.message);
+      });
+  };
 
-const handleKeyDown = (event) => {
+  const handleKeyDown = (event) => {
     if (event.key === "Enter") {
     handleSearch();
     }
 };
+  
 
-const options = {
-    method: "GET",
-    url: "https://exerciseapi3.p.rapidapi.com/search/",
-    params: { name: `${searchQuery}` },
-    headers: {
-    "X-RapidAPI-Key": `${API}`, // Replace with actual API
-    "X-RapidAPI-Host": "exerciseapi3.p.rapidapi.com",
-    },
-};
-
-return (
+  return (
     <div>
     <input
         type="text"
@@ -45,15 +45,9 @@ return (
         onChange={(event) => setSearchQuery(event.target.value)}
         onKeyDown={handleKeyDown} // Added this event handler
         placeholder="Search"
-    />
-    {error && <p>{error}</p>}
-    {searchResults &&
-        searchResults.map((result) => (
-        <div key={result.id}>
-            <h3>{result.title}</h3>
-            <p>{result.description}</p>
-        </div>
-        ))}
+      />
+      {/* <button onClick={handleSearch}>Search</button>
+      {error && <p>{error}</p>} */}
     </div>
 );
 }
