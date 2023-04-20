@@ -964,7 +964,6 @@ textarea {
   /* height: 87vh; */
   z-index: 1;
   /* border: 2px solid #19f19e; */
-
 }
 
 .form-image {
@@ -992,6 +991,17 @@ textarea {
   top: 16.8rem;
   left: 37.7rem;
   filter: brightness(70%);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  width: 30vw;
+  position: relative;
+  left: 2rem;
 }
 }
 
