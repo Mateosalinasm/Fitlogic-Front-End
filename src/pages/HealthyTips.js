@@ -1,6 +1,8 @@
 import { MotionAnimate } from "react-motion-animate";
 import { motion } from 'framer-motion'
+import { Link } from "react-router-dom";
 import TipsArr from "../HealthTipsData";
+
 
 
 const HealthyTips = () => {
@@ -52,13 +54,17 @@ const HealthyTips = () => {
                 alt="First tip"
                 />
                 <motion.p className="tips">
-                    {TipsArr[0].title}
+                    <Link to='/tips/diet' onClick={() => window.scrollTo(0, 0)}>
+                        {TipsArr[0].title}
+                    </Link>
                 </motion.p>
             </div>
 
             <div className="tip">
                 <p className="tips">
-                    {TipsArr[1].title}
+                    <Link to='/tips/hydration' onClick={() => window.scrollTo(0, 0)}>
+                        {TipsArr[1].title}
+                    </Link>
                 </p>
                 <img
                 src="assets/images/food/drini-water-mc-230119-70d222.webp"
@@ -72,13 +78,17 @@ const HealthyTips = () => {
                 alt="third tip"
                 />
                 <p className="tips">
-                    {TipsArr[2].title}
+                    <Link to='/tips/exercise' onClick={() => window.scrollTo(0, 0)}>
+                        {TipsArr[2].title}
+                    </Link>
                 </p>
             </div>
 
             <div className="tip">
                 <p className="tips">
-                    {TipsArr[3].title}
+                    <Link to='/tips/sleep' onClick={() => window.scrollTo(0, 0)}>
+                        {TipsArr[3].title}
+                    </Link>
                 </p>
                 <img
                 src="/assets/images/food/pexels-ketut-subiyanto-4473864.jpg"
@@ -92,13 +102,17 @@ const HealthyTips = () => {
                 alt="fifth tip"
                 />
                 <p className="tips">
-                    {TipsArr[4].title}
+                    <Link to='/tips/stress-management' onClick={() => window.scrollTo(0, 0)}>
+                        {TipsArr[4].title}
+                    </Link>
                 </p>
             </div>
 
             <div className="tip">
                 <p className="tips">
-                    {TipsArr[5].title}
+                    <Link to='/tips/alcohol' onClick={() => window.scrollTo(0, 0)}>
+                        {TipsArr[5].title}
+                    </Link>
                 </p>
                 <img
                 src="assets/images/food/pexels-pixabay-301692.jpg"
@@ -112,13 +126,17 @@ const HealthyTips = () => {
                 alt="seventh tip"
                 />
                 <p className="tips">
-                    {TipsArr[6].title}
+                    <Link to='/tips/smoking' onClick={() => window.scrollTo(0, 0)}>
+                        {TipsArr[6].title}
+                    </Link>
                 </p>
             </div>
 
             <div className="tip">
                 <p className="tips">
-                    {TipsArr[7].title}
+                    <Link to='/tips/hygiene' onClick={() => window.scrollTo(0, 0)}>
+                        {TipsArr[7].title}
+                    </Link>
                 </p>
                 <img
                 src="/assets/images/food/pexels-bennie-lukas-bester-1138149.jpg"
@@ -132,7 +150,9 @@ const HealthyTips = () => {
                 alt="ninth tip"
                 />
                 <p className="tips">
-                    {TipsArr[8].title}
+                    <Link to='/tips/social-connection' onClick={() => window.scrollTo(0, 0)}>
+                        {TipsArr[8].title}
+                    </Link>
                 </p>
             </div>`
         </div>
