@@ -77,17 +77,17 @@ html::-webkit-scrollbar-track {
 }
 
 .navbar {
-
-    display: flex;
-    justify-content: space-between;
-    width: 75vw;
-    height: 4rem;
-    margin: 0 auto;
-    border-left: 2px solid rgb(55, 54, 54);
-    border-right: 2px solid rgb(55, 54, 54);
-    border-bottom-right-radius: 30px ;
-    border-bottom-left-radius: 30px ;
-    box-shadow: 1px 8px 10px ;
+  display: flex;
+  justify-content: space-between;
+  width: 75vw;
+  height: 4rem;
+  margin: 0 auto;
+  border-left: 2px solid rgb(55, 54, 54);
+  border-right: 2px solid rgb(55, 54, 54);
+  border-bottom-right-radius: 30px ;
+  border-bottom-left-radius: 30px ;
+  box-shadow: 1px 8px 10px ;
+  backdrop-filter: blur(4px);
 }
 
 .fade {
@@ -400,14 +400,14 @@ li:hover {
   border-top: 2px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(4px);
   position: relative;
-  top: 3.5rem
-
+  top: 8.5rem
 }
 
 .sign-in-background {
+    /* background-image: url('/assets/images/videos/1440 wave (4).mp4'); */
     position: absolute;
     width: 100vw;
-    /* height: 11vh; */
+    height: 127vh;
     overflow: hidden;
     object-fit: cover;
 }
@@ -512,6 +512,47 @@ fieldset {
   transition: .3s;
 }
 
+.about-page-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  margin: 0 auto;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  width: 100vw;
+  height: 90vh;
+}
+
+.about-page {
+  position: relative;
+  padding-inline: 40px;
+  line-height: 50px;
+  font-size: 25px;
+  font-weight: 500;
+  width: 75vw;
+  /* border: 1px solid #A7FA38; */
+  z-index: 1;
+  top: 5rem;
+  text-shadow: 3px 3px 5px black;
+}
+
+.welcome-about {
+  font-weight: 600;
+  font-size: 40px;
+  color: #A7FA38;
+}
+
+.about-h1-container {
+  display: flex;
+  justify-self: flex-start;
+}
+
+.about-h1 {
+  position: relative;
+  font-weight: 700;
+  font-size: 90px;
+}
+
 /* ------------------------------------------------------------------------------ */
 
 @media screen and (max-width: 390px) {
@@ -534,14 +575,15 @@ fieldset {
 }
 
 .about-us {
-position: relative;
-font-size: 20px;
-border-radius: 30px;
-padding: 10px;
-background-color: rgb(116, 116, 116);
-font-family: "Roboto Condensed",sans-serif;
-transition: transform 0.5s ease, box-shadow 0.3s ease;
+  position: relative;
+  font-size: 20px;
+  border-radius: 30px;
+  padding: 10px;
+  background-color: rgb(116, 116, 116);
+  font-family: "Roboto Condensed",sans-serif;
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
 }
+
 
 .workout {
   /* margin-left: 3rem; */
@@ -673,7 +715,6 @@ transform: translate(-30px, 20px) scale(1.1);
     height: auto;
     /* transform: scale(1.05); */
   }
-
 }
 
 /* ------------------------------------------------------------------------------ */
@@ -698,9 +739,9 @@ transform: translate(-30px, 20px) scale(1.1);
   }
 
 
-  input {
+  /* input {
     display: none;
-  }
+  } */
 
   .menu-container {
     display: flex;
@@ -759,7 +800,7 @@ label {
   display: block;
 }
 
-input,
+
 textarea {
   padding: 10px;
   border: 1px solid #ccc;
@@ -818,7 +859,7 @@ textarea {
   font-weight: 700;
   color: #313133;
   background: #d14f63;
-background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
   border: none;
   border-radius: 1000px;
   box-shadow: 12px 12px 24px rgba(79,209,197,.64);

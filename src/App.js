@@ -28,13 +28,19 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
         {/* <Route
           path="/results"
           element={<ResultPage searchResults={location.state?.searchResults || []} />}
         /> */}
         <Route path="/results" element={<ResultPage />} />
-
+        <Route path="/tip/diet" element={<Register />} />
+        <Route path="/tip/hydration" element={<Register />} />
+        <Route path="/tip/exercise" element={<Register />} />
+        <Route path="/tip/sleep" element={<Register />} />
+        <Route path="/tip/stress-management" element={<Register />} />
+        <Route path="/tip/alcohol" element={<Register />} />
+        <Route path="/tip/smoking" element={<Register />} />
+        <Route path="/tip/social-connection" element={<Register />} />
       </Routes>
     </div>
   );

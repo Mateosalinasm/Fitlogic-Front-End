@@ -35,7 +35,7 @@ const Contact = () => {
           </div>
           <div class="wrap">
           <button class="submit">Submit</button>
-         </div>
+          </div>
         </form>
         <img className='form-image' src="/assets/images/contact-us.jpg" alt="Contact us" />
       </div>
