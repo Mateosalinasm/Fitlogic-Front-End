@@ -1,4 +1,5 @@
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, redirect, useLocation, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar.js";
 import Home from "./pages/Home";
 import Workout from "./pages/Workout";
@@ -18,13 +19,25 @@ import Stress from "./pages/Tips/StressManagement.js";
 import Alcohol from "./pages/Tips/Alcohol.js";
 
 function App() {
+  const [dataState, setDataState] = useState(() => null)
   const location = useLocation();
+  const navigate = useNavigate()
   const isSignInPage = location.pathname === "/login";
   const isRegisterPage = location.pathname === "/register";
+  const handleData = (data) => {
+    console.log("Inside App.js")
+    console.log(data)
+    setDataState(data)
+}
 
+useEffect(() =>{
+  console.log("Changes took place")
+  if(dataState){
+  navigate("/results")}
+}, [dataState])
   return (
     <div className="App">
-      {!isSignInPage && !isRegisterPage && <Navbar />}
+      {!isSignInPage && !isRegisterPage && <Navbar handleData={handleData}/>}
       <nav className={isSignInPage || isRegisterPage ? null : "fade"}></nav>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -34,10 +47,10 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
-        {/* <Route
+        <Route
           path="/results"
           element={<ResultPage searchResults={location.state?.searchResults || []} />}
-        /> */}
+        /> 
         <Route path="/results" element={<ResultPage />} />
         <Route path="/tips/diet" element={<Diet />} />
         <Route path="/tips/hydration" element={<Hydration />} />

@@ -10,7 +10,7 @@ const axios = require("axios");
 
 
 
-const Navbar = ({ activePage, onLinkClick, props }) => {
+const Navbar = (props) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState("");
 
@@ -60,6 +60,7 @@ const Navbar = ({ activePage, onLinkClick, props }) => {
     
 
 
+
     return (
         <div className="container">
             <div className="navbar">
@@ -80,13 +81,8 @@ const Navbar = ({ activePage, onLinkClick, props }) => {
                     </motion.button>
                 </div>
                 <div className="menu-container">
-                    <img className="search" src="/assets/images/icons/magnifying-glass (1).png" />
-                <SearchBar setSearchQuery={setSearchQuery} />
-                {/* <div className="form-container"> */}
-                    {/* <form id="search" action="/"> */}
-                        {/* <input type="text" /> */}
-                    {/* </form> */}
-                {/* </div> */}
+                <img className="search" src="/assets/images/icons/magnifying-glass (1).png" />
+                <SearchBar setSearchQuery={setSearchQuery} handleData={props.handleData}/>
                 <AnimatePresence>
                     {menuOpen && (
                     <Backdrop
