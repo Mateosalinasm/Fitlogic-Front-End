@@ -10,7 +10,7 @@ const Stress = () => {
             <div className="healthy-tip">
                 <h1 className="diet-h1"><span className="diet-h1-span">Stress Management:</span><br/> Tips and Techniques for a Stress Free Life</h1>
                 <div className="diet-text-body">
-                    <h2 className="diet-question">{TipsArr[4].question}</h2>
+                    <h2 className="diet-question minus-bottom">{TipsArr[4].question}</h2>
                     <h3 className="diet-paragraph1">{TipsArr[4].mainAnswer}</h3>
                     <h3 className="diet-description">{TipsArr[4].description}</h3>
                     <h3 className="diet-paragraph1 spacing">{TipsArr[4].paragraph1}</h3>
@@ -22,7 +22,7 @@ const Stress = () => {
                         ></video>
                     </div>
                     <div className="benefits-h2-wrapper">
-                        <h2 className="benefits-overview benefits-overview-h2">{TipsArr[4].benefits}</h2>
+                        <h2 className="benefits-overview benefits-overview-h2 ">{TipsArr[4].benefits}</h2>
                     </div>
                     <div className="benefits-container">
                         <div className="benefits-overview">

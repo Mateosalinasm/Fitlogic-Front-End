@@ -10,7 +10,7 @@ const Sleep = () => {
             <div className="healthy-tip">
                 <h1 className="diet-h1"><span className="diet-h1-span">Getting Enough Sleep:</span><br/> Tips and Tricks for Optimal Rest</h1>
                 <div className="diet-text-body">
-                    <h2 className="diet-question">{TipsArr[3].question}</h2>
+                    <h2 className="diet-question minus-bottom ">{TipsArr[3].question}</h2>
                     <h3 className="diet-paragraph1">{TipsArr[3].mainAnswer}</h3>
                     <h3 className="diet-description">{TipsArr[3].description}</h3>
                     <h3 className="diet-paragraph1 spacing">{TipsArr[3].paragraph1}</h3>

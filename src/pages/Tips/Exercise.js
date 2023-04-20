@@ -4,12 +4,12 @@ import TipsArr from "../../HealthTipsData";
 const Exercise = () => {
     return (
         <div className="tip-container">
-            <div className="diet-image-container">
+            <div className="diet-image-container ">
                 <img className="diet-image bottom-fade" src={TipsArr[2].image} alt="table with food" />
             </div>
             <div className="healthy-tip">
-                <h1 className="diet-h1 top"><span className="diet-h1-span">The Benefits of Exercise:</span><br/> Tips and Tricks for Living an Active Life</h1>
-                <div className="diet-text-body">
+                <h1 className="diet-h1 top minus-bottom"><span className="diet-h1-span">The Benefits of Exercise:</span><br/> Tips and Tricks for Living an Active Life</h1>
+                <div className="diet-text-body ">
                     <h2 className="diet-question">{TipsArr[2].question}</h2>
                     <h3 className="diet-paragraph1">{TipsArr[2].mainAnswer}</h3>
                     <h3 className="diet-description">{TipsArr[2].description}</h3>

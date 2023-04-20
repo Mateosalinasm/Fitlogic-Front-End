@@ -658,7 +658,7 @@ fieldset {
   margin: 0;
   width: 90vw;
   font-size: 60px;
-  margin-bottom: 8rem;
+  margin-bottom: 3rem;
 }
 
 .fitlogic-green {
@@ -746,6 +746,19 @@ fieldset {
 .up {
   position: relative;
   top: -22rem;
+}
+
+.level {
+  position: relative;
+  top: 0rem;
+}
+
+.bottom-space {
+  margin-bottom: 5rem;
+}
+
+.minus-bottom {
+  margin-bottom: -4rem;
 }
 
 .bottom-fade {

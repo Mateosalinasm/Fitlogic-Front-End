@@ -15,29 +15,29 @@ const Alcohol = () => {
                     <h3 className="diet-description">{TipsArr[5].description}</h3>
                     <h3 className="diet-paragraph1 spacing">{TipsArr[5].paragraph1}</h3>
                     <div className="diet-video-container">
-                        <video className="diet-video bottom-fade" src="/assets/images/videos/stress-vid.mp4"
+                        <video className="diet-video bottom-fade" src="/assets/images/videos/alcohol-vid.mp4"
                             autoPlay
                             muted
                             loop
                         ></video>
                     </div>
                     <div className="benefits-h2-wrapper">
-                        <h2 className="benefits-overview benefits-overview-h2">{TipsArr[5].benefits}</h2>
+                        <h2 className="benefits-overview benefits-overview-h2">{TipsArr[5].question2}</h2>
                     </div>
                     <div className="benefits-container">
                         <div className="benefits-overview">
                             <div>
                                 <ol className="benefits">
-                                    <li className="benefits-li">{TipsArr[5].benefit1}</li>
-                                    <li className="benefits-li">{TipsArr[5].benefit2}</li>
-                                    <li className="benefits-li">{TipsArr[5].benefit3}</li>
-                                    <li className="benefits-li">{TipsArr[5].benefit4}</li>
+                                    <li className="benefits-li">{TipsArr[5].answer1}</li>
+                                    <li className="benefits-li">{TipsArr[5].answer2}</li>
+                                    <li className="benefits-li">{TipsArr[5].answer3}</li>
+                                    <li className="benefits-li">{TipsArr[5].answer4}</li>
                                 </ol>
                             </div>
                         </div>
                     </div>
                     <div className="inline">
-                        <img className="fruit-img no-border left-rem" src="/assets/images/stress (1).png" alt="" />
+                        <img className="fruit-img no-border left-rem" src="/assets/images/alcohol.png" alt="" />
                     </div>
                     <div className="tips-tricks-container">
                         <div className="tips-tricks-h2 fitlogic-green ">

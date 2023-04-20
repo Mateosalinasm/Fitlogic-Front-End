@@ -17,6 +17,9 @@ import Exercise from "./pages/Tips/Exercise.js";
 import Sleep from "./pages/Tips/Sleep.js";
 import Stress from "./pages/Tips/StressManagement.js";
 import Alcohol from "./pages/Tips/Alcohol.js";
+import Smoking from "./pages/Tips/Smoking.js";
+import Social from "./pages/Tips/Social.js";
+import Hygiene from "./pages/Tips/Hygiene.js";
 
 function App() {
   const [dataState, setDataState] = useState(() => null)
@@ -58,8 +61,9 @@ useEffect(() =>{
         <Route path="/tips/sleep" element={<Sleep />} />
         <Route path="/tips/stress-management" element={<Stress />} />
         <Route path="/tips/alcohol" element={<Alcohol />} />
-        <Route path="/tips/smoking" element={<Register />} />
-        <Route path="/tips/social-connection" element={<Register />} />
+        <Route path="/tips/smoking" element={<Smoking />} />
+        <Route path="/tips/hygiene" element={<Hygiene />} />
+        <Route path="/tips/social-connection" element={<Social />} />
       </Routes>
     </div>
   );
