@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import API from "../secret";
 import { useNavigate } from "react-router-dom";
 
+const API = process.env.REACT_APP_API;
 function SearchBar(props) {
   console.log(props)
   const [searchQuery, setSearchQuery] = useState("");
