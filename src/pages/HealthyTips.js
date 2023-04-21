@@ -69,7 +69,7 @@ const HealthyTips = () => {
                     </Link>
                 </p>
                 <img
-                src="assets/images/food/drini-water-mc-230119-70d222.webp"
+                src="/assets/images/food/guy-drinking-water.png"
                 alt="Second tip"
                 />
             </div>

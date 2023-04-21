@@ -23,6 +23,7 @@ import Hygiene from "./pages/Tips/Hygiene.js";
 
 
 
+
 function App() {
   const [dataState, setDataState] = useState(() => null)
   const location = useLocation();
@@ -34,6 +35,7 @@ function App() {
     console.log(data)
     setDataState(data)
 }
+
 
 useEffect(() =>{
   console.log("Changes took place")
