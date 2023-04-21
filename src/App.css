@@ -1347,50 +1347,41 @@ transform: translate(-30px, 20px) scale(1.1);
   top: 5rem;
 } */
 
-.my-workout-form-container {
+.add-workout {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
-.add-workout {
-  position: relative;
-  top: 5rem;
+.add-workout h2 {
+  margin-bottom: 20px;
 }
 
 .workout-form {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 400px;
+  align-items: center;
 }
 
 .input-field {
-  width: 100%;
+  margin: 10px 0;
   padding: 10px;
-  margin-bottom: 10px;
-  font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  outline: none;
-}
-
-.input-field:focus {
-  border-color: #0078e7;
+  width: 100%;
 }
 
 .submit-btn {
-  width: 100%;
+  margin-top: 20px;
   padding: 10px;
-  font-size: 14px;
-  font-weight: bold;
+  background-color: #2196f3;
   color: #fff;
-  background-color: #0078e7;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
 }
 
 .submit-btn:hover {
-  background-color: #0058b8;
+  background-color: #0d8bf2;
 }
