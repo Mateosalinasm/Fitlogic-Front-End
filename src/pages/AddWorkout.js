@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import Modal from '../components/Modal'
 
 function AddWorkout() {
     const list = [
@@ -104,18 +105,18 @@ function EditList({current, lists, setList}) {
         setList(newlist)
     }
 
-    function handInputreps(event) {
+        function handInputreps(event) {
 
-      const value = event.target.value;
+        const value = event.target.value;
 
-      const newlist = lists.map((li) => (
+        const newlist = lists.map((li) => (
 
-          li.id === current.id ? {...li, reps :value} : li
-      ))
+            li.id === current.id ? {...li, reps :value} : li
+        ))
 
-      setList(newlist)
-  }
-  
+        setList(newlist)
+    }
+    
     return(
         <tr>
             <td><input type="text" onChange={handInputname} name='name' value={current.name}/></td>
@@ -146,9 +147,9 @@ function AddList({setList}) {
 
         const newlist = {
           id: Math.floor(Math.random() * 1000000),
-          name,
-          workout,
-          reps,
+            name,
+            workout,
+            reps,
         };
 
         setList((prevList)=> {
@@ -164,12 +165,15 @@ function AddList({setList}) {
     }
     return(
         <div className="my-workout-form-container">
+            
+        <Modal>
             <form className='addForm' onSubmit={handleSubmit}>
                 <input type="text" name="name" placeholder="Your Name" ref={nameRef}/>
                 <input type="text" name="workout" placeholder="Workout" ref={workoutRef}/>
                 <input type="text" name="reps" placeholder="reps" ref={repsRef}/>
-            <button type="submit">Add</button>
-        </form>
+                <button type="submit">Add</button> 
+            </form>
+        </Modal>
         </div>
         
     )

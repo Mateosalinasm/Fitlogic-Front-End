@@ -117,10 +117,9 @@ const LogIn = () => {
             <div data-tilt data-tilt-scale="1.01" data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.5" className="sign-in">
                 <div>
                     <div>
-                        <h1 className="sign-in-title">Join Us!</h1>
+                        <h1 className="sign-in-title">Log In</h1>
                         <img data-tilt data-tilt-scale="1.1" className="sign-in-logo" src="/assets/images/logos/Untitled design (4).png" alt="" />
-
-                             <main className="registration login-btns sign-up-layout">
+                                <main className="registration login-btns sign-up-layout">
                                 <>
                                 <LoginButton /> 
                                 <LogoutButton /> 
