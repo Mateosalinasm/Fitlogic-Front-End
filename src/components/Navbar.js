@@ -20,8 +20,8 @@ const Navbar = (props) => {
 
     const handleLinkClick = () => {
         setMenuOpen(false);
+        window.scrollTo(0, 0)
     };
-
     const [searchData, setSearchData] = React.useState({
         searchterm: "",
     });
@@ -71,7 +71,7 @@ const Navbar = (props) => {
                         className="menu-btn"
                         onClick={() => null}
                     >
-                        <Link to="/">
+                        <Link to="/" onClick={() => window.scrollTo(0, 0)}>
                             <img
                                 className="logo"
                                 src="/assets/images/logos/Ethereal Yoga & Wellness Logo (500 × 200 px) (500 × 100 px) (400 × 100 px) (250 × 60 px) (400 × 100 px).png"
