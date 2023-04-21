@@ -44,7 +44,6 @@ const ResultPage = (props) => {
 
   return (
     <div>
-      <h1>Search Results</h1>
       {props.dataState ?(
         <ExerciseList exercise={props.dataState} />
       ) : (
