@@ -1,9 +1,22 @@
 import TipsArr from "../../HealthTipsData";
-
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Hygiene = () => {
     return (
         <div className="tip-container">
+            <div className="back-container">
+                <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="menu-btn"
+                    onClick={() => null}
+                > 
+                    <Link to='/healthy-tips' onClick={() => window.scrollTo(0, 0)}>
+                        <img className="back" src="/assets/images/icons/back-arrow.png" alt="back arrow" />
+                    </Link>
+                </motion.button>
+            </div>
             <div className="diet-image-container">
                 <img className="diet-image bottom-fade up" src={TipsArr[7].image} alt="table with food" />
             </div>
@@ -59,6 +72,18 @@ const Hygiene = () => {
                         <div className="conclusion">
                             <p>{TipsArr[7].conclusion}</p>
                         </div>
+                    </div>
+                    <div className="footer-back-container">
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.9 }}
+                            className="menu-btn"
+                            onClick={() => null}
+                        > 
+                            <Link to='/healthy-tips' onClick={() => window.scrollTo(0, 0)}>
+                                <h2 className="fitlogic-green font">Back to Tips</h2>
+                            </Link>
+                        </motion.button>
                     </div>
                 </div>
             </div>

@@ -1,9 +1,23 @@
 import TipsArr from "../../HealthTipsData";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 
 const Diet = () => {
     return (
         <div className="tip-container">
+            <div className="back-container">
+                <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="menu-btn"
+                    onClick={() => null}
+                > 
+                    <Link to='/healthy-tips' onClick={() => window.scrollTo(0, 0)}>
+                        <img className="back" src="/assets/images/icons/back-arrow.png" alt="back arrow" />
+                    </Link>
+                </motion.button>
+            </div>
             <div className="diet-image-container">
                 <img className="diet-image" src={TipsArr[0].image} alt="table with food" />
             </div>
@@ -17,6 +31,7 @@ const Diet = () => {
                     <div className="diet-video-container">
                         <video className="diet-video" src="/assets/images/videos/Untitled design (7).mp4"
                             autoPlay
+                            loop
                             muted
                         ></video>
                     </div>
@@ -36,7 +51,7 @@ const Diet = () => {
                         </div>
                     </div>
                     <div >
-                        <img className="fruit-img" src="/assets/images/food/pexels-jane-doan-1092730.jpg" alt="" />
+                        <img className="fruit-img right-rem " src="/assets/images/food/pexels-jane-doan-1092730.jpg" alt="" />
                     </div>
                     <div className="tips-tricks-container">
                         <div className="tips-tricks-h2 fitlogic-green ">
@@ -47,12 +62,12 @@ const Diet = () => {
                         </div>
                         <div className="benefits-overview">
                             <ol className="tips-and-tricks">
-                                    <li className="tips-and-tricks-li">{TipsArr[0].tip1}</li>
-                                    <li className="tips-and-tricks-li">{TipsArr[0].tip2}</li>
-                                    <li className="tips-and-tricks-li">{TipsArr[0].tip3}</li>
-                                    <li className="tips-and-tricks-li">{TipsArr[0].tip4}</li>
-                                    <li className="tips-and-tricks-li">{TipsArr[0].tip5}</li>
-                                    <li className="tips-and-tricks-li">{TipsArr[0].tip6}</li>
+                                <li className="tips-and-tricks-li">{TipsArr[0].tip1}</li>
+                                <li className="tips-and-tricks-li">{TipsArr[0].tip2}</li>
+                                <li className="tips-and-tricks-li">{TipsArr[0].tip3}</li>
+                                <li className="tips-and-tricks-li">{TipsArr[0].tip4}</li>
+                                <li className="tips-and-tricks-li">{TipsArr[0].tip5}</li>
+                                <li className="tips-and-tricks-li">{TipsArr[0].tip6}</li>
                             </ol>
                         </div>
                     </div>
@@ -60,6 +75,18 @@ const Diet = () => {
                         <div className="conclusion">
                             <p>{TipsArr[0].conclusion}</p>
                         </div>
+                    </div>
+                    <div className="footer-back-container">
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.9 }}
+                            className="menu-btn"
+                            onClick={() => null}
+                        > 
+                            <Link to='/healthy-tips' onClick={() => window.scrollTo(0, 0)}>
+                                <h2 className="fitlogic-green font">Back to Tips</h2>
+                            </Link>
+                        </motion.button>
                     </div>
                 </div>
             </div>
