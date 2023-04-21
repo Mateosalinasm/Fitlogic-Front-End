@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Modal from '../components/Modal';
 
 const AddWorkout = () => {
+
   const [workouts, setWorkouts] = useState([]);
   const [editing, setEditing] = useState(null);
   const [formData, setFormData] = useState({
@@ -21,7 +23,6 @@ const AddWorkout = () => {
       setWorkouts(response.data);
     } catch (error) {
       console.error(error);
-      alert('Error fetching workouts');
     }
   };
 
@@ -34,11 +35,9 @@ const AddWorkout = () => {
     try {
       await axios.post('http://localhost:5000/workouts', formData);
       setFormData({ name: '', workout: '', reps: '', youtubeVideo: '' });
-      alert('Workout added successfully!');
       fetchWorkouts();
     } catch (error) {
       console.error(error);
-      alert('Error adding workout');
     }
   };
 
@@ -56,24 +55,20 @@ const AddWorkout = () => {
     e.preventDefault();
     try {
       await axios.put(`http://localhost:5000/workouts/${editing}`, formData);
-      alert('Workout updated successfully!');
       setEditing(null);
       setFormData({ name: '', workout: '', reps: '', youtubeVideo: '' });
       fetchWorkouts();
     } catch (error) {
       console.error(error);
-      alert('Error updating workout');
     }
   };
 
   const handleDelete = async (id) => {
     try {
       await axios.delete(`http://localhost:5000/workouts/${id}`);
-      alert('Workout deleted successfully!');
       fetchWorkouts();
     } catch (error) {
       console.error(error);
-      alert('Error deleting workout');
     }
   };
 
@@ -114,7 +109,7 @@ const AddWorkout = () => {
           className="input-field"
         />
         <input
-          type="number"
+          type="text"
           name="reps"
           placeholder="Reps"
           value={formData.reps}
@@ -131,12 +126,24 @@ const AddWorkout = () => {
             required
             className="input-field"
           />
+          
           <button type="submit" className="submit-btn">
-            {editing ? 'Update Workout' : 'Add Workout'}
-          </button>
-        </form>
+  {editing ? 'Update Workout' : 'Add Workout'}
+</button>
+{editing && (
+  <button
+    type="button"
+    onClick={() => {
+      setEditing(null);
+      setFormData({ name: '', workout: '', reps: '', youtubeVideo: '' });
+    }}
+    className="cancel-btn"
+  >
+    Cancel
+  </button>
+  )}
+    </form>
         <div className="workout-list">
-          <h2>Workouts</h2>
           <ul className='ul-From-List'>
             {workouts.map((workout) => (
               <li className='li-list' key={workout._id}>
@@ -144,7 +151,6 @@ const AddWorkout = () => {
                   <h3>{workout.name}</h3>
                   <p>{workout.workout}</p>
                   <p>{workout.reps}</p>
-                  <p>{workout.youtubeVideo}</p>
                   {workout.youtubeVideo && (
                     <div className="video-wrapper">
                       <iframe
@@ -159,6 +165,7 @@ const AddWorkout = () => {
                   )}
                 </div>
                 <div className="workout-actions">
+                  <Modal />
                   <button onClick={() => handleEdit(workout)}>Edit</button>
                   <button onClick={() => handleDelete(workout._id)}>Delete</button>
                 </div>

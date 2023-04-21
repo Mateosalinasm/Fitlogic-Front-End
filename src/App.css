@@ -1349,7 +1349,7 @@ transform: translate(-30px, 20px) scale(1.1);
 
 
 .workout-info {
-color: white;
+color: rgb(126, 255, 244);
 }
 
 
@@ -1428,4 +1428,91 @@ color: white;
   margin: 0 0.25rem;
   cursor: pointer;
   border-radius: 4px;
+}
+
+
+.cancel-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.modal, .overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  background: rgba(49, 49, 49, 0.8);
+}
+
+.modal-content {
+  position: absolute;
+  /* transform: translate(-50%, -50%); */
+  line-height: 1.4;
+  background-color: black;
+  color: #A7FA38;
+  padding: 14px 28px;
+  border-radius: 3px;
+  max-width: 600px;
+  min-width: 300px;
+  font-size: 40px;
+  border-radius: 30px;
+
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 1px 12px;
+    height: 50px;
+  color: black;
+  /* color: rgba(91, 91, 40); */
+  background-color:#A7FA38;
+  border: 2px solid #121212; 
+  border-radius: 30px; 
+  font-size: 22px;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.btn-modal-container {
+  position: relative;
+  top: 2rem;
+  display: flex;
+  z-index: 3;
+  width: 100vw;
+}
+
+.btn-modal {
+}
+
+.x {
+  width: 15px;
+  padding-inline: 10px;
+  
 }
