@@ -52,10 +52,10 @@ useEffect(() =>{
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
-         <Route
-           path="/results"
-           element={<ResultPage dataState={dataState} />}
-         />
+        <Route
+          path="/results"
+          element={<ResultPage dataState={dataState} />}
+        />
         <Route path="/results" element={<ResultPage />} />
         <Route path="/tips/diet" element={<Diet />} />
         <Route path="/tips/hydration" element={<Hydration />} />

@@ -15,6 +15,29 @@ const HealthyTips = () => {
             ease={[0.75, 0.45, 0.53, 0.94]}
             // reset={true}
             >
+            <div className="health-quote-wrapper">
+            <motion.h4
+                className="motivational-quote health-quote"
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{
+                    duration: '2',
+                    delay: '2',
+            }}
+            >
+                “Your body can stand almost anything. It’s your mind that you have to convince.”-Andrew Murphy
+            </motion.h4>
+            </div>
+            <video className="water" src="/assets/images/videos/pexels-rostislav-uzunov-7385122.mp4" 
+            autoPlay
+            loop
+            muted
+            >
+            
+            </video>
+            </MotionAnimate>
+        </div>
+        <div className="wrapper">
             <motion.h1
                 className="health-title"
                 initial={{opacity: 0}}
@@ -26,27 +49,6 @@ const HealthyTips = () => {
             >
                 Healthy Tips
             </motion.h1>
-            <motion.h4
-                className="motivational-quote health-quote"
-                initial={{opacity: 0}}
-                animate={{opacity: 1}}
-                transition={{
-                    duration: '2',
-                    delay: '4',
-            }}
-            >
-                “Your body can stand almost anything. It’s your mind that you have to convince.”-Andrew Murphy
-            </motion.h4>
-            <video className="water" src="/assets/images/videos/pexels-rostislav-uzunov-7385122.mp4" 
-            autoPlay
-            loop
-            muted
-            >
-            
-            </video>
-            </MotionAnimate>
-        </div>
-        <div className="wrapper">
             <div className="tip">
                 <img
                 className="health-image"
@@ -54,7 +56,7 @@ const HealthyTips = () => {
                 alt="First tip"
                 />
                 <motion.p className="tips">
-                    <Link to='/tips/diet' onClick={() => window.scrollTo(0, 0)}>
+                    <Link className='health-link' to='/tips/diet' onClick={() => window.scrollTo(0, 0)}>
                         {TipsArr[0].title}
                     </Link>
                 </motion.p>
@@ -62,7 +64,7 @@ const HealthyTips = () => {
 
             <div className="tip">
                 <p className="tips">
-                    <Link to='/tips/hydration' onClick={() => window.scrollTo(0, 0)}>
+                    <Link className='health-link' to='/tips/hydration' onClick={() => window.scrollTo(0, 0)}>
                         {TipsArr[1].title}
                     </Link>
                 </p>
@@ -78,7 +80,7 @@ const HealthyTips = () => {
                 alt="third tip"
                 />
                 <p className="tips">
-                    <Link to='/tips/exercise' onClick={() => window.scrollTo(0, 0)}>
+                    <Link className='health-link' to='/tips/exercise' onClick={() => window.scrollTo(0, 0)}>
                         {TipsArr[2].title}
                     </Link>
                 </p>
@@ -86,7 +88,7 @@ const HealthyTips = () => {
 
             <div className="tip">
                 <p className="tips">
-                    <Link to='/tips/sleep' onClick={() => window.scrollTo(0, 0)}>
+                    <Link className='health-link' to='/tips/sleep' onClick={() => window.scrollTo(0, 0)}>
                         {TipsArr[3].title}
                     </Link>
                 </p>
@@ -102,7 +104,7 @@ const HealthyTips = () => {
                 alt="fifth tip"
                 />
                 <p className="tips">
-                    <Link to='/tips/stress-management' onClick={() => window.scrollTo(0, 0)}>
+                    <Link className='health-link' to='/tips/stress-management' onClick={() => window.scrollTo(0, 0)}>
                         {TipsArr[4].title}
                     </Link>
                 </p>
@@ -110,7 +112,7 @@ const HealthyTips = () => {
 
             <div className="tip">
                 <p className="tips">
-                    <Link to='/tips/alcohol' onClick={() => window.scrollTo(0, 0)}>
+                    <Link className='health-link' to='/tips/alcohol' onClick={() => window.scrollTo(0, 0)}>
                         {TipsArr[5].title}
                     </Link>
                 </p>
@@ -126,7 +128,7 @@ const HealthyTips = () => {
                 alt="seventh tip"
                 />
                 <p className="tips">
-                    <Link to='/tips/smoking' onClick={() => window.scrollTo(0, 0)}>
+                    <Link className='health-link' to='/tips/smoking' onClick={() => window.scrollTo(0, 0)}>
                         {TipsArr[6].title}
                     </Link>
                 </p>
@@ -134,7 +136,7 @@ const HealthyTips = () => {
 
             <div className="tip">
                 <p className="tips">
-                    <Link to='/tips/hygiene' onClick={() => window.scrollTo(0, 0)}>
+                    <Link className='health-link' to='/tips/hygiene' onClick={() => window.scrollTo(0, 0)}>
                         {TipsArr[7].title}
                     </Link>
                 </p>
@@ -150,7 +152,7 @@ const HealthyTips = () => {
                 alt="ninth tip"
                 />
                 <p className="tips">
-                    <Link to='/tips/social-connection' onClick={() => window.scrollTo(0, 0)}>
+                    <Link className='health-link' to='/tips/social-connection' onClick={() => window.scrollTo(0, 0)}>
                         {TipsArr[8].title}
                     </Link>
                 </p>
