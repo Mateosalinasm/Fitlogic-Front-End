@@ -1353,15 +1353,8 @@ transform: translate(-30px, 20px) scale(1.1);
 }
 
 .add-workout {
-<<<<<<< HEAD
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-=======
   position: relative;
   top: 5rem;
->>>>>>> 665d17bb95c6641a4c99e55ef95f133261f5a6b7
 }
 
 .workout-form {
