@@ -19,7 +19,7 @@ function AddWorkout() {
     const [lists, setList] = useState(list)
     const [updateState, setUpdateState] = useState(-1)
     return(
-        <div className='Add-workout'>
+        <div className='add-workout'>
             <div>
             <AddList setList = {setList }/>
             <form onSubmit={handleSubmit}>
@@ -163,16 +163,15 @@ function AddList({setList}) {
 
     }
     return(
-        <form className='addForm' onSubmit={handleSubmit}>
-
-            <input type="text" name="name" placeholder="Your Name" ref={nameRef}/>
-
-            <input type="text" name="workout" placeholder="Workout" ref={workoutRef}/>
-
-            <input type="number" name="reps" placeholder="reps" ref={repsRef}/>
-
+        <div className="my-workout-form-container">
+            <form className='addForm' onSubmit={handleSubmit}>
+                <input type="text" name="name" placeholder="Your Name" ref={nameRef}/>
+                <input type="text" name="workout" placeholder="Workout" ref={workoutRef}/>
+                <input type="text" name="reps" placeholder="reps" ref={repsRef}/>
             <button type="submit">Add</button>
         </form>
+        </div>
+        
     )
 }
 
