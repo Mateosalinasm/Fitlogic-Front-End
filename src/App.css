@@ -1347,49 +1347,43 @@ transform: translate(-30px, 20px) scale(1.1);
   top: 5rem;
 } */
 
-.my-workout-form-container {
-  display: flex;
-  justify-content: center;
-}
-
 .add-workout {
-  position: relative;
-  top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
-table td {
-  width: 200px;
-  height: 30px;
-  background-color: rgb(169, 68, 160);
-  text-align: center;
-  color: white;
+.add-workout h2 {
+  margin-bottom: 20px;
 }
 
-table td button {
-  padding: 5px 10px;
-  border-radius: 5%;
+.workout-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-field {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
-table td button.edit {
-  border: 1px solid green;
-  background-color: rgb(7, 168, 7);
-  color: white;
-}
-table td button.edit:hover {
-  background-color: rgb(3, 71, 3);
-}
-table td button.delete {
-  border: 1px solid red;
-  background-color: rgb(219, 19, 19);
-  color: white;
-}
-table td button.delete:hover {
-  background-color: rgb(92, 5, 5);
-}
 
-
-.addForm {
-  margin-bottom: 30px;
+.submit-btn:hover {
+  background-color: #0d8bf2;
 }
 .addForm input {
   width: 230px;
@@ -1462,6 +1456,7 @@ table td button.delete:hover {
 
 .btn-modal-container {
   position: relative;
+  top: 2rem;
   display: flex;
   z-index: 3;
   width: 100vw;

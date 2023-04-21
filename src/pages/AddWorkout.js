@@ -165,15 +165,13 @@ function AddList({setList}) {
     }
     return(
         <div className="my-workout-form-container">
-            
-        <Modal>
+          <Modal/>
             <form className='addForm' onSubmit={handleSubmit}>
                 <input type="text" name="name" placeholder="Your Name" ref={nameRef}/>
                 <input type="text" name="workout" placeholder="Workout" ref={workoutRef}/>
                 <input type="text" name="reps" placeholder="reps" ref={repsRef}/>
                 <button type="submit">Add</button> 
             </form>
-        </Modal>
         </div>
         
     )

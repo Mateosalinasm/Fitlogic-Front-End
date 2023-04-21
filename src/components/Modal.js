@@ -38,12 +38,6 @@ const Modal = () => {
                             <p>
                                 New workout
                             </p>
-                            {/* <button
-                            className="close-modal"
-                            onClick={toggleModal}
-                            >
-                                Close
-                            </button> */}
                                 <button onClick={toggleModal} className="req-btn close-modal">
                                     <img className="x" src="/assets/images/icons/cross.png" alt="x" />
                                 </button>
