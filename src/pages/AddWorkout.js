@@ -165,6 +165,8 @@ const AddWorkout = () => {
                     </div>
                   )}
                 </div>
+                <Modal />
+
                 <div className="workout-actions">
                   
                   <button onClick={() => handleEdit(workout)}>Edit</button>
