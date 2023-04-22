@@ -94,6 +94,7 @@ const AddWorkout = () => {
       ) : (
         <h2>Add Workout</h2>
       )}
+<<<<<<< HEAD
 
 
 
@@ -138,3 +139,105 @@ const AddWorkout = () => {
 };
 
 export default AddWorkout;
+=======
+      <form onSubmit={editing ? handleUpdate : handleSubmit} className="workout-form">
+        <input
+          type="text"
+          name="workout"
+          placeholder="Workout"
+          value={formData.workout}
+          onChange={handleChange}
+          required
+          className="input-field"
+        />
+        <input
+          type="text"
+          name="sets"
+          placeholder="Sets"
+          value={formData.sets}
+          onChange={handleChange}
+          required
+          className="input-field"
+        />
+       
+       <input
+  type="text"
+  name="reps"
+  placeholder="Reps"
+  value={formData.reps}
+  onChange={handleChange}
+  required
+  className="input-field"
+/>
+            <input
+                   type="text"
+                   name="category"
+                   placeholder="Category"
+                   value={formData.category}
+                   onChange={handleChange}
+                   required
+                   className="input-field"
+                 />
+            <input
+                   type="text"
+                   name="youtubeVideo"
+                   placeholder="YouTube Video URL"
+                   value={formData.youtubeVideo}
+                   onChange={handleChange}
+                   required
+                   className="input-field"
+                 /><button type="submit" className="submit-btn">
+                 {editing ? 'Update Workout' : 'Add Workout'}
+               </button>
+               {editing && (
+                 <button
+                   type="button"
+                   onClick={() => {
+                     setEditing(null);
+                     setFormData({ workout: '', sets: '', reps: '', category: '', youtubeVideo: '' });
+                   }}
+                   className="cancel-btn"
+                 >
+                   Cancel
+                 </button>
+               )}
+               <Modal />
+             </form>
+             <div className="workout-list">
+               <ul className='ul-From-List'>
+                 {workouts.map((workout) => (
+                   <li className='li-list' key={workout._id}>
+                     <div className="workout-info">
+                       <h3>{workout.workout}</h3>
+                       <p>Sets: {workout.sets}</p>
+                       <p>Reps: {workout.reps}</p>
+                       <p>Category: {workout.category}</p>
+                       {workout.youtubeVideo && (
+                         <div className="video-wrapper">
+                           <iframe
+                             width="560"
+                             height="315"
+                             src={`https://www.youtube.com/embed/${extractVideoId(workout.youtubeVideo)}`}
+                             title={workout.workout}
+                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                             allowFullScreen
+                           ></iframe>
+                         </div>
+                       )}
+                     </div>
+                     <Modal />
+
+                <div className="workout-actions">
+                       <button onClick={() => handleEdit(workout)}>Edit</button>
+                       <button onClick={() => handleDelete(workout._id)}>Delete</button>
+                     </div>
+                   </li>
+                 ))}
+               </ul>
+             </div>
+           </div>
+           );
+           };
+           
+           export default AddWorkout;
+>>>>>>> 234e220954d0ef7ca215ef22ae85826da04155cc
