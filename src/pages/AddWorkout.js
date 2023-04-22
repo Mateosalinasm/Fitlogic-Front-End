@@ -3,18 +3,17 @@ import axios from 'axios';
 import Modal from '../components/Modal';
 
 const AddWorkout = () => {
-
   const [workouts, setWorkouts] = useState([]);
   const [editing, setEditing] = useState(null);
   const [formData, setFormData] = useState({
     workout: '',
-    sets: "",
+    sets: '',
     reps: '',
     youtubeVideo: '',
-    category: ""
+    category: ''
   });
 
-  const [categories, setCategories] = useState(['push', 'pull', 'legs', 'core']);
+  const categories = ['push', 'pull', 'legs', 'core'];
 
   useEffect(() => {
     fetchWorkouts();
@@ -22,34 +21,16 @@ const AddWorkout = () => {
 
   const fetchWorkouts = async () => {
     try {
-        const response = await axios.get('http://localhost:4000/workouts');
-        setWorkouts(response.data);
-    } catch (error) {
-        console.error(error);
-    }
-};
-
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      if (editing) {
-        await axios.put(`http://localhost:4000/workouts/${editing}`, formData);
-        setEditing(null);
-      } else {
-        await axios.post('http://localhost:4000/workouts', formData);
-      }
-      setFormData({ workout: '', sets: '', reps: '', youtubeVideo: '', category: '' });
-      fetchWorkouts();
+      const response = await axios.get('http://localhost:4000/workouts');
+      setWorkouts(response.data);
     } catch (error) {
       console.error(error);
     }
   };
 
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const handleEdit = (workout) => {
     setEditing(workout._id);
@@ -67,7 +48,7 @@ const AddWorkout = () => {
     try {
       await axios.put(`http://localhost:4000/workouts/${editing}`, formData);
       setEditing(null);
-      setFormData({ workout: '', sets: '', reps: '', youtubeVideo: '' , category:  ''});
+      setFormData({ workout: '', sets: '', reps: '', youtubeVideo: '', category: '' });
       fetchWorkouts();
     } catch (error) {
       console.error(error);
@@ -94,55 +75,103 @@ const AddWorkout = () => {
   };
 
   return (
-    
     <div className="add-workout">
       <Modal fetchWorkouts={fetchWorkouts} />
-      {editing ? (
-        <h2>Edit Workout</h2>
-      ) : (
-        <h2>Add Workout</h2>
+
+      {editing && (
+        <div className="edit-workout-form">
+          <h2>Edit Workout</h2>
+          <form onSubmit={handleUpdate} className="workout-form">
+            <input
+              type="text"
+              name="workout"
+              placeholder="Workout"
+              value={formData.workout}
+              onChange={handleChange}
+              required
+              className="input-field"
+            />
+            <input
+              type="text"
+              name="sets"
+              placeholder="Sets"
+              value={formData.sets}
+              onChange={handleChange}
+              required
+              className="input-field"
+            />
+            <input
+              type="text"
+              name="reps"
+              placeholder="Reps"
+              value={formData.reps}
+              onChange={handleChange}
+              required
+              className="input-field"
+            />
+            <input
+              type="text"
+              name="youtubeVideo"
+              placeholder="YouTube Video URL"
+              value={formData.youtubeVideo}
+              onChange              onChange={handleChange}
+              className="input-field"
+            />
+            <select
+              name="category"
+              value={formData.category}
+              onChange={handleChange}
+              required
+              className="input-field"
+            >
+              <option value="">Select category</option>
+              {categories.map((category) => (
+                <option key={category} value={category}>
+                  {category}
+                </option>
+              ))}
+            </select>
+            <button type="submit" className="submit-btn">
+              Update Workout
+            </button>
+          </form>
+          <button onClick={() => setEditing(null)} className="cancel-edit-btn">
+            Cancel
+          </button>
+        </div>
       )}
 
-
-
-     
-
-
-
-
-        <div className="workout-list">
-          <ul className='ul-From-List'>
-            {workouts.map((workout) => (
-              <li className='li-list' key={workout._id}>
-                <div className="workout-info">
-                  <p>{workout.workout}</p>
-                  <p>{workout.sets}</p>
-                  <p>{workout.reps}</p>
-                  <p>{workout.category}</p>
-                  {workout.youtubeVideo && (
-                    <div className="video-wrapper">
-                      <iframe
-                        width="560"
-                        height="315"
-                        src={`https://www.youtube.com/embed/${extractVideoId(workout.youtubeVideo)}`}
-
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      ></iframe>
-                    </div>
-                  )}
-                </div>
-                <div className="workout-actions">
-
-                  <button onClick={() => handleEdit(workout)}>Edit</button>
-                  <button onClick={() => handleDelete(workout._id)}>Delete</button>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
+      <div className="workout-list">
+        <ul className="ul-From-List">
+          {workouts.map((workout) => (
+            <li className="li-list" key={workout._id}>
+              <div className="workout-info">
+                <p>{workout.workout}</p>
+                <p>{workout.sets}</p>
+                <p>{workout.reps}</p>
+                <p>{workout.category}</p>
+                {workout.youtubeVideo && (
+                  <div className="video-wrapper">
+                    <iframe
+                      width="560"
+                      height="315"
+                      src={`https://www.youtube.com/embed/${extractVideoId(workout.youtubeVideo)}`}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                )}
+              </div>
+              <div className="workout-actions">
+                <button onClick={() => handleEdit(workout)}>Edit</button>
+                <button onClick={() => handleDelete(workout._id)}>Delete</button>
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
-);
+    </div>
+  );
 };
 
 export default AddWorkout;
