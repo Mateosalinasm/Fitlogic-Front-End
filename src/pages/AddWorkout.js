@@ -142,6 +142,7 @@ const AddWorkout = () => {
     Cancel
   </button>
   )}
+    <Modal />
     </form>
         <div className="workout-list">
           <ul className='ul-From-List'>
@@ -165,7 +166,7 @@ const AddWorkout = () => {
                   )}
                 </div>
                 <div className="workout-actions">
-                  <Modal />
+                  
                   <button onClick={() => handleEdit(workout)}>Edit</button>
                   <button onClick={() => handleDelete(workout._id)}>Delete</button>
                 </div>
@@ -177,4 +178,4 @@ const AddWorkout = () => {
 );
 };
 
-export default AddWorkout;      
+export default AddWorkout;     
