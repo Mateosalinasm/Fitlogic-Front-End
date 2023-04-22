@@ -20,7 +20,19 @@ import Alcohol from "./pages/Tips/Alcohol.js";
 import Smoking from "./pages/Tips/Smoking.js";
 import Social from "./pages/Tips/Social.js";
 import Hygiene from "./pages/Tips/Hygiene.js";
-
+import Pull from "./components/Pull.js";
+import Push from "./components/Push.js";
+import Core from "./components/Core.js";
+import Legs from "./components/Legs.js";
+import Biceps from "./components/Biceps.js";
+import LatissimusDorsi from "./components/LatissimusDorsi.js";
+import Trapezius from "./components/Trapezius.js";
+import PectoralisMajor from "./components/PectoralisMajor.js";
+import Deltoids from "./components/Deltoids.js";
+import Triceps from "./components/Triceps.js";
+import Glutes from "./components/Glutes.js";
+import Quadriceps from "./components/Quadriceps.js";
+import Hamstrings from "./components/Hamstring.js";
 
 
 
@@ -68,6 +80,27 @@ useEffect(() =>{
         <Route path="/tips/smoking" element={<Smoking />} />
         <Route path="/tips/hygiene" element={<Hygiene />} />
         <Route path="/tips/social-connection" element={<Social />} />
+        <Route  path="/workout/pull" element={<Pull />} />
+        <Route  path="/workout/push" element={<Push />} />
+        <Route  path="/workout/core" element={<Core />} />
+        <Route  path="/workout/legs" element={<Legs />} />
+        <Route path="/workout/pull/biceps" element={<Biceps />} />
+        <Route  path="/workout/pull/trapezius" element={<Trapezius />} />
+        <Route  path="/workout/pull/latissimus-dorsi" element={<LatissimusDorsi />} />
+        <Route path="/workout/push/pectoralis-major" element={<PectoralisMajor />} />
+        <Route path="/workout/push/deltoids" element={<Deltoids />} />
+        <Route path="/workout/push/triceps" element={<Triceps />} />
+        <Route path="/workout/legs/glutes" element={<Glutes />} />
+        <Route path="/workout/legs/quadriceps" element={<Quadriceps />} />
+        <Route path="/workout/legs/hamstring" element={<Hamstrings />} />
+
+
+
+        
+
+
+
+
       </Routes>
     </div>
   );
