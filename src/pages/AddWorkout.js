@@ -19,7 +19,7 @@ const AddWorkout = () => {
 
   const fetchWorkouts = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/workouts');
+      const response = await axios.get('http://localhost:4000/workouts');
       setWorkouts(response.data);
     } catch (error) {
       console.error(error);
@@ -33,7 +33,7 @@ const AddWorkout = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/workouts', formData);
+      await axios.post('http://localhost:4000/workouts', formData);
       setFormData({ name: '', workout: '', reps: '', youtubeVideo: '' });
       fetchWorkouts();
     } catch (error) {
@@ -54,7 +54,7 @@ const AddWorkout = () => {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5000/workouts/${editing}`, formData);
+      await axios.put(`http://localhost:4000/workouts/${editing}`, formData);
       setEditing(null);
       setFormData({ name: '', workout: '', reps: '', youtubeVideo: '' });
       fetchWorkouts();
@@ -65,7 +65,7 @@ const AddWorkout = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/workouts/${id}`);
+      await axios.delete(`http://localhost:4000/workouts/${id}`);
       fetchWorkouts();
     } catch (error) {
       console.error(error);
