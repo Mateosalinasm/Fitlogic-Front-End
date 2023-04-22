@@ -45,6 +45,26 @@ const Home = () => {
         >
         <Banner />
         </MotionAnimate>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <MotionAnimate
+            className="workout-banner-motion"
+            delay={1}
+            speed={1}
+            ease={[0.8, 0.45, 0.53, 0.94]}
+            reset={true}
+            >
+            <video 
+            className="green-video"
+            src="/assets/images/videos/Fitlogic (1).mp4" 
+            autoPlay
+            loop
+            muted></video>
+        </MotionAnimate>
     </div>
     );
 }
