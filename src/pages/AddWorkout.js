@@ -84,11 +84,12 @@ const AddWorkout = () => {
 
   return (
     <div className="add-workout">
-      {editing ? (
+      <Modal />
+      {/* {editing ? (
         <h2>Edit Workout</h2>
       ) : (
         <h2>Add Workout</h2>
-      )}
+      )} */}
       <form onSubmit={editing ? handleUpdate : handleSubmit} className="workout-form">
         <input
           type="text"
@@ -128,54 +129,55 @@ const AddWorkout = () => {
           />
           
           <button type="submit" className="submit-btn">
-  {editing ? 'Update Workout' : 'Add Workout'}
-</button>
-{editing && (
-  <button
-    type="button"
-    onClick={() => {
-      setEditing(null);
-      setFormData({ name: '', workout: '', reps: '', youtubeVideo: '' });
-    }}
-    className="cancel-btn"
-  >
-    Cancel
-  </button>
-  )}
-    <Modal />
-    </form>
-        <div className="workout-list">
-          <ul className='ul-From-List'>
-            {workouts.map((workout) => (
-              <li className='li-list' key={workout._id}>
-                <div className="workout-info">
-                  <h3>{workout.name}</h3>
-                  <p>{workout.workout}</p>
-                  <p>{workout.reps}</p>
-                  {workout.youtubeVideo && (
-                    <div className="video-wrapper">
+          {editing ? 'Update Workout' : 'Add Workout'}
+          </button>
+          {editing && (
+          <button
+            type="button"
+            onClick={() => {
+              setEditing(null);
+              setFormData({ name: '', workout: '', reps: '', youtubeVideo: '' });
+            }}
+            className="cancel-btn"
+          >
+            Cancel
+          </button>
+          )}
+          </form>
+        <div className="new-workout-wrapper">
+            <div>
+              <ul className='new-workout-ul'>
+                {workouts.map((workout) => (
+                <li className='li-list' key={workout._id}>
+                  <div className="my-workout-container">
+                    <div className="text-wrapper">
+                      <h3>{workout.name}</h3>
+                      <p>{workout.workout}</p>
+                      <p>{workout.reps}</p>
+                    </div>
+                    {workout.youtubeVideo && (
+                    <div className="">
                       <iframe
-                        width="560"
-                        height="315"
+                        className='exercise-video-card'
                         src={`https://www.youtube.com/embed/${extractVideoId(workout.youtubeVideo)}`}
                         title={workout.name}
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                       ></iframe>
+                      <div className="workout-actions">
+                        <button onClick={() => handleEdit(workout)}>Edit</button>
+                        <button onClick={() => handleDelete(workout._id)}>Delete</button>
+                      </div>
                     </div>
-                  )}
-                </div>
-                <div className="workout-actions">
-                  
-                  <button onClick={() => handleEdit(workout)}>Edit</button>
-                  <button onClick={() => handleDelete(workout._id)}>Delete</button>
-                </div>
-              </li>
-            ))}
-          </ul>
+                    )}
+                  </div>
+                </li>
+                ))}
+              </ul>
         </div>
       </div>
-);
+    </div>
+  );
 };
 
 export default AddWorkout;     
