@@ -45,7 +45,7 @@ export default CoreWorkout;
       <h1>Push Workout</h1>
       <ul>
         <li>
-          <Link to="/workout/legs/abdominal">Abdominals</Link>
+          <Link to="/workout/core/abdominal">Abdominals</Link>
         </li>
       </ul>
     </div> */}
