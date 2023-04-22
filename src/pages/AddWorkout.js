@@ -114,7 +114,7 @@ const AddWorkout = () => {
               name="youtubeVideo"
               placeholder="YouTube Video URL"
               value={formData.youtubeVideo}
-              onChange              onChange={handleChange}
+              onChange ={handleChange}
               className="input-field"
             />
             <select
@@ -131,7 +131,7 @@ const AddWorkout = () => {
                 </option>
               ))}
             </select>
-            <button type="submit" className="submit-btn">
+            <button type="submit" className="update-workouts">
               Update Workout
             </button>
           </form>
@@ -142,9 +142,9 @@ const AddWorkout = () => {
       )}
 
       <div className="workout-list">
-        <ul className="ul-From-List">
+        <ul>
           {workouts.map((workout) => (
-            <li className="li-list" key={workout._id}>
+            <li key={workout._id}>
               <div className="workout-info">
                 <p>{workout.workout}</p>
                 <p>{workout.sets}</p>
@@ -162,9 +162,9 @@ const AddWorkout = () => {
                   </div>
                 )}
               </div>
-              <div className="workout-actions">
-                <button onClick={() => handleEdit(workout)}>Edit</button>
-                <button onClick={() => handleDelete(workout._id)}>Delete</button>
+              <div>
+                <button  className='workout-actions-edit' onClick={() => handleEdit(workout)}>Edit</button>
+                <button className='workout-actions-delete' onClick={() => handleDelete(workout._id)}>Delete</button>
               </div>
             </li>
           ))}

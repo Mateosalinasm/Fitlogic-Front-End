@@ -112,7 +112,7 @@ const Modal = ({ fetchWorkouts }) => {
                     </option>
                   ))}
                 </select>
-                <button type="submit" className="submit-btn">
+                <button type="submit" className="add-workout-menu">
                   Add Workout
                 </button>
               </form>

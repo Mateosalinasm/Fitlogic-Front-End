@@ -1,3 +1,6 @@
+
+ 
+
 html {
   background-color: #121212;
   overflow-x: hidden;
@@ -1326,17 +1329,14 @@ transform: translate(-30px, 20px) scale(1.1);
   justify-content: space-between;
   margin-bottom: 20px;
 }
-
 .tip img {
   width: 400px;
   margin-right: 20px;
   height: 250px;
 }
-
 .tip p {
   width: 50%;
 }
-
 .tips {
   font-size: 30px;
   color: aliceblue;
@@ -1409,25 +1409,7 @@ color: rgb(126, 255, 244);
   background-color: rgb(5, 86, 5);
 }
 
-.ul-From-List {
-  list-style-type: none;
-  padding: 0;
-}
 
-.li-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #293a4b;
-  border: 1px solid #dee2e6;
-  border-radius: 4px;
-  padding: 1rem;
-  margin: 0.5rem 0;
-  width: 100%;
-  max-width: 600px;
-  position: relative;
-  right: 5rem;
-}
 
 .workout-actions button {
   background-color: #007bff;
@@ -1534,7 +1516,6 @@ color: rgb(126, 255, 244);
 color: rgb(126, 255, 244);
 }
 
-
 .add-workout {
   display: flex;
   flex-direction: column;
@@ -1576,26 +1557,6 @@ color: rgb(126, 255, 244);
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.ul-From-List {
-  list-style-type: none;
-  padding: 0;
-}
-
-.li-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #293a4b;
-  border: 1px solid #dee2e6;
-  border-radius: 4px;
-  padding: 1rem;
-  margin: 0.5rem 0;
-  width: 100%;
-  max-width: 600px;
-  position: relative;
-  right: 5rem;
 }
 
 .workout-actions button {
@@ -1732,4 +1693,106 @@ ul {
   flex-direction: row;
   justify-content: center;
   padding: 1rem;
+}
+
+
+.add-workout-menu {
+  position: relative;
+  top: 1rem;
+  color: #fff;
+  padding: 15px 25px;
+  background-color: #40d1d6;
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+  border-radius: 14px;
+  font-weight: bold;
+  font-size: 16px;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+.update-workouts {
+  position: relative;
+  top: 1rem;
+  color: #fff;
+  padding: 15px 25px;
+  background-color: #40d1d6;
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+  border-radius: 14px;
+  font-weight: bold;
+  font-size: 16px;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+.workout-actions-edit {
+  position: relative;
+  left: 0;
+  color: #fff;
+  padding: 15px 25px;
+  background-color: #40d6d6;
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+  border-radius: 14px;
+  font-weight: bold;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+
+.workout-actions-edit,
+.workout-actions-delete {
+  position: absolute;
+  bottom: -60px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+.workout-actions-delete {
+
+  right: 0;
+  color: #fff;
+  padding: 7px 25px;
+  background-color: #ff0303;
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+  border-radius: 0 4px 4px 0;
+}
+
+.cancel-edit-btn {
+  color: #fff;
+  padding: 15px 25px;
+  background-color: #ff0000;
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+  border-radius: 14px;
+  font-weight: bold;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  cursor: pointer;
+}
+
+.edit-workout-form {
+  color:  lightgreen;
 }
