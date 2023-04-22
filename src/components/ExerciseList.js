@@ -1,47 +1,3 @@
-// import React from 'react';
-
-// const SearchResult = (props) => {
-//     console.log(props)
-//     const exercise = props.exercise[0]
-//     console.log(exercise)
-//   return (
-//     <div>
-//       <h2>{exercise.Name}</h2>
-//       <p><strong>Type: </strong>{exercise.Type}</p>
-//       <p><strong>Primary Muscles: </strong>{exercise['Primary Muscles'].join(', ')}</p>
-//       <p><strong>Secondary Muscles: </strong>{exercise.SecondaryMuscles.join(', ')}</p>
-//       <p><strong>Force: </strong>{exercise.Force}</p>
-//       <p><strong>Workout Type: </strong>{exercise['Workout Type'].join(', ')}</p>
-//       <p><strong>Youtube Link: </strong><a href={exercise['Youtube link']}>{exercise['Youtube link']}</a></p>
-//     </div>
-//   );
-// };
-
-
-
-// import React from 'react';
-
-// const SearchResult = (props) => {
-//     console.log(props)
-//     const exercise = props.exercise[0]
-//     console.log(exercise)
-//   return (
-//     <div>
-//       <h2>{exercise.Name}</h2>
-//       <p><strong>Type: </strong>{exercise.Type}</p>
-//       <p><strong>Primary Muscles: </strong>{exercise['Primary Muscles'].join(', ')}</p>
-//       <p><strong>Secondary Muscles: </strong>{exercise.SecondaryMuscles.join(', ')}</p>
-//       <p><strong>Force: </strong>{exercise.Force}</p>
-//       <p><strong>Workout Type: </strong>{exercise['Workout Type'].join(', ')}</p>
-//       <p><strong>Youtube Link: </strong><a href={exercise['Youtube link']}>{exercise['Youtube link']}</a></p>
-//       <div>
-//        <iframe width="560" height="315" src={exercise['Youtube link']} title={exercise.Name}></iframe>
-//       </div>
-
-//     </div>
-//   );
-// };
-
 
 import React, { useState, useEffect } from 'react';
 
@@ -67,7 +23,7 @@ const SearchResult = (props) => {
         <iframe
           width="560"
           height="315"
-          src={`https://www.youtube.com/embed/${videoId}`}
+          src={`https://www.youtube.com/embed/${videoId}`} //Should render, but after research there is an API error with the playback
           title={props.exercise[0].Name}
         ></iframe>
       </div>
@@ -77,3 +33,4 @@ const SearchResult = (props) => {
 
 
 export default SearchResult;
+
