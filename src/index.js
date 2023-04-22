@@ -40,7 +40,7 @@
 
 
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App.js';
 import reportWebVitals from './reportWebVitals';
@@ -49,8 +49,8 @@ import { Auth0Provider } from '@auth0/auth0-react';
 const authDomain = process.env.REACT_APP_AUTH0_DOMAIN;
 const authClientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
 
-
-ReactDOM.render(
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <React.StrictMode>
     <Auth0Provider
       domain={authDomain}
@@ -64,7 +64,7 @@ ReactDOM.render(
       </BrowserRouter>
     </Auth0Provider>
   </React.StrictMode>,
-  document.getElementById('root')
 );
+
 
 reportWebVitals();

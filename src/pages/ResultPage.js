@@ -26,12 +26,16 @@ import SearchResult from '../components/ExerciseList';
 
 const ResultPage = (props) => {
   return (
-    <div className='search-render'>
-      {props.dataState ?(
-        <SearchResult exercise={props.dataState} />
-      ) : (
-        <p>No results found.</p>
-      )}
+    <div className="search-parent-container">
+      <div className="search-container">
+        <div className='search-render'>
+          {props.dataState ?(
+            <SearchResult className='fitlogic-green' exercise={props.dataState} />
+          ) : (
+            <p>No results found.</p>
+          )}
+        </div>
+      </div>
     </div>
   );
 };

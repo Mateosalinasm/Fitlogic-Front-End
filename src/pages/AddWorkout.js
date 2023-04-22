@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Modal from '../components/Modal';
 
+
+
+
 const AddWorkout = () => {
   const [workouts, setWorkouts] = useState([]);
   const [editing, setEditing] = useState(null);
@@ -75,8 +78,15 @@ const AddWorkout = () => {
   };
 
   return (
+  
+  
+    
+
+
     <div className="add-workout">
       <Modal fetchWorkouts={fetchWorkouts} />
+
+
 
       {editing && (
         <div className="edit-workout-form">
@@ -125,6 +135,7 @@ const AddWorkout = () => {
               className="input-field"
             >
               <option value="">Select category</option>
+              
               {categories.map((category) => (
                 <option key={category} value={category}>
                   {category}
@@ -141,36 +152,48 @@ const AddWorkout = () => {
         </div>
       )}
 
+<div className="video-modal-container">
+  <video className='video-myworkout' src="/assets/FitLogic-Myworkout.mp4"
+    autoPlay
+    loop
+    muted>
+  </video>
+
+  <div className="modal-container">
+  </div>
+</div>
+
       <div className="workout-list">
-        <ul>
-          {workouts.map((workout) => (
-            <li key={workout._id}>
-              <div className="workout-info">
-                <p>{workout.workout}</p>
-                <p>{workout.sets}</p>
-                <p>{workout.reps}</p>
-                <p>{workout.category}</p>
-                {workout.youtubeVideo && (
-                  <div className="video-wrapper">
-                    <iframe
-                      width="560"
-                      height="315"
-                      src={`https://www.youtube.com/embed/${extractVideoId(workout.youtubeVideo)}`}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    ></iframe>
-                  </div>
-                )}
-              </div>
-              <div>
-                <button  className='workout-actions-edit' onClick={() => handleEdit(workout)}>Edit</button>
-                <button className='workout-actions-delete' onClick={() => handleDelete(workout._id)}>Delete</button>
-              </div>
-            </li>
-          ))}
+        <ul className='new-workout-ul '>
+        {workouts.map((workout) => (
+  <li key={workout._id} className="workout-item">
+    <div className="workout-info">
+      <p>{workout.workout}</p>
+      <p>{workout.sets}</p>
+      <p>{workout.reps}</p>
+      <p>{workout.category}</p>
+      {workout.youtubeVideo && (
+        <div className="video-wrapper">
+          <iframe
+            width="560"
+            height="315"
+            src={`https://www.youtube.com/embed/${extractVideoId(workout.youtubeVideo)}`}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+      )}
+    </div>
+    <div>
+      <button className='workout-actions-edit' onClick={() => handleEdit(workout)}>Edit</button>
+      <button className='workout-actions-delete' onClick={() => handleDelete(workout._id)}>Delete</button>
+    </div>
+  </li>
+))}
         </ul>
       </div>
     </div>
+    
   );
 };
 

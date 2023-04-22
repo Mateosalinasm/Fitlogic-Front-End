@@ -47,7 +47,7 @@ const Modal = ({ fetchWorkouts }) => {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.8 }}
-          className="menu-btn"
+          className="new-workout-btn"
         >
           <button onClick={toggleModal} className="req-btn log-in-btn">
             New Workout
