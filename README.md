@@ -1,69 +1,70 @@
-# Getting Started with Create React App
+<h1>Fitlogic<h1>
+<h4>Get Fit the Smart Way<h5>
+  
+  ![Screenshot 2023-04-22 at 4 13 37 AM](https://user-images.githubusercontent.com/119995266/233773197-d5e5a785-0281-4d54-bf4e-7adbb11d7d17.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+This application was a joint effort to create an app that not only gave you exercise information, but also information on how to be healthly.
 
-### `npm start`
+<h4>Project Description</h4>
+This app is built to help the user to create a customizable workout where they can Create-Post-View-edit-Delete the post. the app has many pages like (Homepage - about us - contact - healthy tips - Workouts view page - Form to create a new workout ) , The HomePage will display the sign in - sign up form while the healthy tips page will display healthy snack-food that will help you keep your diet while you are working out !
+and we have form page to create a new workout where the user can write their name , workout exercise with the details, and add image to the post with description and will have a ( workouts view page) where the user can see the previously posted Workouts
+  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  
+![Screenshot 2023-04-22 at 4 14 30 AM](https://user-images.githubusercontent.com/119995266/233773225-ccc9e5c2-7a8c-4e84-93e3-3f581c2b2f57.png)
+  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+<h4>Wireframes</h4>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+https://user-images.githubusercontent.com/119995266/233772932-b1c1fc6a-3441-4736-b8f4-16272906ac3d.mp4
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Schema:
+Work-out Name - String
+Description - String
+Repetition or Time (minutes)- Boolean/Number
+User Schema:
+Username - String
+Password - String
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Routes:
+GET/ - Homepage
+GET/workout - Workout Index
+GET/workout/:id - Workout view page
+GET/workout/new- Form to create a new workout
+POST/workout - Create new user work-out
+GET/workout/:id/edit - Edit user's work-out
+PUT/workout/:id - Delete work-out
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<h4>User Stories</h4>
+As a user, I want to be able to log-in/sign-up.
+As a User, I would like to be able to add an exercise to my routine.
+As a User, I would like to be able to view the index of work-outs.
+As a User, I would like to be able to edit my routine.
+As a User, I would like to see an aesthetic application.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<h4>MVP Goals</h4>
+MERN
+Full CRUD
+User Authentication
+Nav Bar
+MVC
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
+<h4>Stretch Goals</h4>
+Stretch Goals:
+Add a workout API
+Add pre-calibrated workout-plans
+One to many User profiles
+Add Social features
+Add Nutrition tracking
+Add Health metrics
+  
+  
+<h3>Backend Repo<h3>
+https://github.com/ellesiba/Fitlogic-Backend
