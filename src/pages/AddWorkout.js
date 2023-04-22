@@ -1,180 +1,181 @@
-import React, { useRef, useState } from 'react'
-import Modal from '../components/Modal'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import Modal from '../components/Modal';
 
-function AddWorkout() {
-    const list = [
-        {
-            id: 1, 
-            name: "Sara",
-            workout: "pushup",
-            reps: 12
-        },
-        {
-            id: 2, 
-            name: "john",
-            workout: "whatever",
-            reps: 12
-        },
-    ]
+const AddWorkout = () => {
 
-    const [lists, setList] = useState(list)
-    const [updateState, setUpdateState] = useState(-1)
-    return(
-        <div className='add-workout'>
-            <div>
-            <AddList setList = {setList }/>
-            <form onSubmit={handleSubmit}>
-            <table>
-                {
-                    lists.map((current) => (
-                        updateState === current.id ? <EditList current={current} lists={lists} setList={setList}/> :
-                        <tr>
-                            <td>{current.name}</td>
-                            <td>{current.workout}</td>
-                            <td>{current.reps}</td>
+  const [workouts, setWorkouts] = useState([]);
+  const [editing, setEditing] = useState(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    workout: '',
+    reps: '',
+    youtubeVideo: ''
+  });
 
-                            <td>
+  useEffect(() => {
+    fetchWorkouts();
+  }, []);
 
-                                <button className='edit' onClick={() => handleEdit(current.id)}>Edit  workout</button>
+  const fetchWorkouts = async () => {
+    try {
+      const response = await axios.get('http://localhost:4000/workouts');
+      setWorkouts(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
-                                <button className='delete' type='button' onClick={() => handleDelete(current.id)}>Delete workout</button>
-                            </td>
-                        </tr>
-                    ))
-                }
-            </table>
-            </form>
-            </div>
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.post('http://localhost:4000/workouts', formData);
+      setFormData({ name: '', workout: '', reps: '', youtubeVideo: '' });
+      fetchWorkouts();
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const handleEdit = (workout) => {
+    setEditing(workout._id);
+    setFormData({
+      name: workout.name,
+      workout: workout.workout,
+      reps: workout.reps,
+      youtubeVideo: workout.youtubeVideo,
+    });
+  };
+
+  const handleUpdate = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.put(`http://localhost:4000/workouts/${editing}`, formData);
+      setEditing(null);
+      setFormData({ name: '', workout: '', reps: '', youtubeVideo: '' });
+      fetchWorkouts();
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const handleDelete = async (id) => {
+    try {
+      await axios.delete(`http://localhost:4000/workouts/${id}`);
+      fetchWorkouts();
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const extractVideoId = (url) => {
+    const regex = /(https?:\/\/)?(www\.)?(youtube\.com|youtu\.?be)\/.+$/;
+    const match = url.match(regex);
+    if (match) {
+      const parsedUrl = new URL(url);
+      return parsedUrl.searchParams.get("v");
+    }
+    return null;
+  };
+
+  return (
+    <div className="add-workout">
+      {editing ? (
+        <h2>Edit Workout</h2>
+      ) : (
+        <h2>Add Workout</h2>
+      )}
+      <form onSubmit={editing ? handleUpdate : handleSubmit} className="workout-form">
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+          className="input-field"
+        />
+        <input
+          type="text"
+          name="workout"
+          placeholder="Workout"
+          value={formData.workout}
+          onChange={handleChange}
+          required
+          className="input-field"
+        />
+        <input
+          type="text"
+          name="reps"
+          placeholder="Reps"
+          value={formData.reps}
+          onChange={handleChange}
+          required
+          className="input-field"
+          />
+          <input
+            type="text"
+            name="youtubeVideo"
+            placeholder="YouTube Video URL"
+            value={formData.youtubeVideo}
+            onChange={handleChange}
+            required
+            className="input-field"
+          />
+          
+          <button type="submit" className="submit-btn">
+  {editing ? 'Update Workout' : 'Add Workout'}
+</button>
+{editing && (
+  <button
+    type="button"
+    onClick={() => {
+      setEditing(null);
+      setFormData({ name: '', workout: '', reps: '', youtubeVideo: '' });
+    }}
+    className="cancel-btn"
+  >
+    Cancel
+  </button>
+  )}
+    <Modal />
+    </form>
+        <div className="workout-list">
+          <ul className='ul-From-List'>
+            {workouts.map((workout) => (
+              <li className='li-list' key={workout._id}>
+                <div className="workout-info">
+                  <h3>{workout.name}</h3>
+                  <p>{workout.workout}</p>
+                  <p>{workout.reps}</p>
+                  {workout.youtubeVideo && (
+                    <div className="video-wrapper">
+                      <iframe
+                        width="560"
+                        height="315"
+                        src={`https://www.youtube.com/embed/${extractVideoId(workout.youtubeVideo)}`}
+                        title={workout.name}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                  )}
+                </div>
+                <div className="workout-actions">
+                  
+                  <button onClick={() => handleEdit(workout)}>Edit</button>
+                  <button onClick={() => handleDelete(workout._id)}>Delete</button>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
-    )
+      </div>
+);
+};
 
-    function handleEdit(id) {
-        setUpdateState(id)
-        
-    }
-    function handleDelete(id) {
-
-        const newlist = lists.filter((li) => li.id !== id)
-        setList(newlist)
-
-    }
-    function handleSubmit(event) {
-
-        event.preventDefault()
-
-        const name = event.target.elements.name.value
-
-        const workout = event.target.elements.workout.value
-
-        const reps = event.target.elements.reps.value
-
-        const newlist = lists.map((li) => (
-
-            li.id === updateState ? {...li, name:name, workout: workout, reps: reps} : li
-        ))
-
-        setList(newlist)
-        
-        setUpdateState(-1)
-    }
-}
-
-function EditList({current, lists, setList}) {
-
-    function handInputname(event) {
-
-        const value = event.target.value;
-
-        const newlist = lists.map((li) => (
-
-            li.id === current.id ? {...li, name :value} : li
-        ))
-
-        setList(newlist)
-    }
-
-    function handInputworkout(event) {
-
-        const value = event.target.value;
-
-        const newlist = lists.map((li) => (
-
-            li.id === current.id ? {...li, workout :value} : li
-        ))
-
-        setList(newlist)
-    }
-
-        function handInputreps(event) {
-
-        const value = event.target.value;
-
-        const newlist = lists.map((li) => (
-
-            li.id === current.id ? {...li, reps :value} : li
-        ))
-
-        setList(newlist)
-    }
-    
-    return(
-        <tr>
-            <td><input type="text" onChange={handInputname} name='name' value={current.name}/></td>
-
-            <td><input type="text" onChange={handInputworkout} name='workout' value={current.workout}/></td>
-            
-            <td><input type="number" onChange={handInputreps} name='reps' value={current.reps}/></td>
-
-
-            <td><button type='submit'>Update</button></td>
-        </tr>
-    )
-}
-
-function AddList({setList}) {
-    const nameRef = useRef()
-    const workoutRef = useRef()
-    const repsRef = useRef()
-
-    function handleSubmit(event) {
-        event.preventDefault();
-
-        const name = event.target.elements.name.value;
-
-        const workout = event.target.elements.workout.value;
-
-        const reps = event.target.elements.reps.value;
-
-        const newlist = {
-          id: Math.floor(Math.random() * 1000000),
-            name,
-            workout,
-            reps,
-        };
-
-        setList((prevList)=> {
-            return prevList.concat(newlist)
-        })
-
-        nameRef.current.value = ""
-
-        workoutRef.current.value = ""
-
-        repsRef.current.value = ""
-
-    }
-    return(
-        <div className="my-workout-form-container">
-          <Modal/>
-            <form className='addForm' onSubmit={handleSubmit}>
-                <input type="text" name="name" placeholder="Your Name" ref={nameRef}/>
-                <input type="text" name="workout" placeholder="Workout" ref={workoutRef}/>
-                <input type="text" name="reps" placeholder="reps" ref={repsRef}/>
-                <button type="submit">Add</button> 
-            </form>
-        </div>
-        
-    )
-}
-
-export default AddWorkout;
+export default AddWorkout;     
