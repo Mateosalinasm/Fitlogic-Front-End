@@ -94,7 +94,7 @@ useEffect(() =>{
         <Route path="/workout/legs/glutes" element={<Glutes />} />
         <Route path="/workout/legs/quadriceps" element={<Quadriceps />} />
         <Route path="/workout/legs/hamstring" element={<Hamstrings />} />
-        <Route path="/workout/legs/abdominal" element={<Abdominal />} />
+        <Route path="/workout/core/abdominal" element={<Abdominal />} />
 
 
 
