@@ -33,6 +33,7 @@ import Triceps from "./components/Triceps.js";
 import Glutes from "./components/Glutes.js";
 import Quadriceps from "./components/Quadriceps.js";
 import Hamstrings from "./components/Hamstring.js";
+import Abdominal from "./components/Abdominals.js";
 
 
 
@@ -93,6 +94,7 @@ useEffect(() =>{
         <Route path="/workout/legs/glutes" element={<Glutes />} />
         <Route path="/workout/legs/quadriceps" element={<Quadriceps />} />
         <Route path="/workout/legs/hamstring" element={<Hamstrings />} />
+        <Route path="/workout/core/abdominal" element={<Abdominal />} />
 
 
 
