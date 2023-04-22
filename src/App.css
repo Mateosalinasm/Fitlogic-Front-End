@@ -1626,3 +1626,8 @@ color: rgb(126, 255, 244);
   cursor: pointer;
   border-radius: 4px;
 }
+
+
+.search-render{
+  color: white
+}
