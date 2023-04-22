@@ -22,12 +22,13 @@ const AddWorkout = () => {
 
   const fetchWorkouts = async () => {
     try {
-      const response = await axios.get('http://localhost:4000/workouts');
-      setWorkouts(response.data);
+        const response = await axios.get('http://localhost:4000/workouts');
+        setWorkouts(response.data);
     } catch (error) {
-      console.error(error);
+        console.error(error);
     }
-  };
+};
+
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -36,13 +37,19 @@ const AddWorkout = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:4000/workouts', formData);
-      setFormData({ workout: '', sets: '', reps: '', youtubeVideo: '' , category:  ''});
+      if (editing) {
+        await axios.put(`http://localhost:4000/workouts/${editing}`, formData);
+        setEditing(null);
+      } else {
+        await axios.post('http://localhost:4000/workouts', formData);
+      }
+      setFormData({ workout: '', sets: '', reps: '', youtubeVideo: '', category: '' });
       fetchWorkouts();
     } catch (error) {
       console.error(error);
     }
   };
+
 
   const handleEdit = (workout) => {
     setEditing(workout._id);
@@ -89,6 +96,7 @@ const AddWorkout = () => {
   return (
     
     <div className="add-workout">
+      <Modal fetchWorkouts={fetchWorkouts} />
       {editing ? (
         <h2>Edit Workout</h2>
       ) : (
@@ -97,7 +105,7 @@ const AddWorkout = () => {
 
 
 
-      <Modal />
+     
 
 
 

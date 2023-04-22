@@ -32,12 +32,13 @@ const Modal = ({ fetchWorkouts }) => {
         try {
             await axios.post('http://localhost:4000/workouts', formData);
             setFormData({ workout: '', sets: '', reps: '', youtubeVideo: '', category: '' });
-            fetchWorkouts();
+            await fetchWorkouts();
             toggleModal();
         } catch (error) {
             console.error(error);
         }
     };
+    
 
     const categories = ['push', 'pull', 'legs', 'core'];
 
