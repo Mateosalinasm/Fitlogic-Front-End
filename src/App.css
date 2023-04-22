@@ -121,13 +121,14 @@ html::-webkit-scrollbar-track {
 .menu-container {
   display: flex;
   justify-content: space-between;
-  padding: 15px 20px;
+  padding: 15px 0px;
   width: 270px;
 }
 
 .menu {
   width: 30px;
   filter: invert(1);
+  
 }
 
 .menu:hover {

@@ -206,7 +206,7 @@ const Navbar = (props) => {
                                 opacity: isActive ? "100%" : "90%",
                                 };
                             }}>
-                                Log in
+                                Log in/out
                             </NavLink>
                         </li>
                         </React.Fragment>
