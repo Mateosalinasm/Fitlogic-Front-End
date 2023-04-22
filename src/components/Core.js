@@ -1,28 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Core = () => {
-  const coreExercises = [
-    "Plank",
-    "Weighted Plank",
-    "Crunch",
-    "Cable Crunch",
-    "Dead Bug",
-    "Mountain Climbers",
-    "Hanging Knee Raises",
-    "Hanging Leg Raises",
-    "Leg Raises"
-  ];
-
+const CoreWorkout = () => {
   return (
     <div>
-      <h1>Core Exercises</h1>
+      <h1>Push Workout</h1>
       <ul>
-        {coreExercises.map((exercise, index) => (
-          <li key={index}>{exercise}</li>
-        ))}
+        <li>
+          <Link to="/workout/legs/abdominal">Abdominals</Link>
+        </li>
       </ul>
     </div>
   );
 };
 
-export default Core;
+export default CoreWorkout;
