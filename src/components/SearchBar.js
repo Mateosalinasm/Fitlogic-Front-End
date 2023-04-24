@@ -63,6 +63,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const API = process.env.REACT_APP_API;
+console.log(API)
 
 function SearchBar(props) {
   console.log(props);
