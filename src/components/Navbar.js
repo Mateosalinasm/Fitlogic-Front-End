@@ -34,19 +34,11 @@ const Navbar = (props) => {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(searchData.searchterm); // log the search term
-        // fetch(`https://exerciseapi3.p.rapidapi.com/search/?q=${searchData.searchterm}`)
-        //     .then(response => response.json())
-        //     .then(data => {
-        //          Do something with the search results
-        //         console.log(data)
-        //     })
-        //     .catch(error => console.error(error));
         const options = {
         method: 'GET',
         url: 'https://exerciseapi3.p.rapidapi.com/search/',
         params: {name: 'Barbell Bench Press'},
         headers: {
-
         }
         };
 

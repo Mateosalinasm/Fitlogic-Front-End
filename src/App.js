@@ -1,4 +1,4 @@
-import { Route, Routes, redirect, useLocation, useNavigate } from "react-router-dom";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar.js";
 import Home from "./pages/Home";
@@ -8,7 +8,6 @@ import HealthyTips from "./pages/HealthyTips.js";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login.js";
-import Register from "./pages/Register.js";
 import ResultPage from "./pages/ResultPage.js";
 import Diet from './pages/Tips/Diet.js';
 import "./App.css";
@@ -42,7 +41,6 @@ function App() {
   const location = useLocation();
   const navigate = useNavigate()
   const isSignInPage = location.pathname === "/login";
-  const isRegisterPage = location.pathname === "/register";
   const handleData = (data) => {
     console.log("Inside App.js")
     console.log(data)
@@ -57,8 +55,8 @@ useEffect(() =>{
 }, [dataState])
   return (
     <div className="App">
-      {!isSignInPage && !isRegisterPage && <Navbar handleData={handleData}/>}
-      <nav className={isSignInPage || isRegisterPage ? null : "fade"}></nav>
+      {!isSignInPage  && <Navbar handleData={handleData}/>}
+      <nav className={isSignInPage ? null : "fade"}></nav>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/workout" element={<Workout />} />
@@ -95,14 +93,6 @@ useEffect(() =>{
         <Route path="/workout/legs/quadriceps" element={<Quadriceps />} />
         <Route path="/workout/legs/hamstring" element={<Hamstrings />} />
         <Route path="/workout/core/abdominal" element={<Abdominal />} />
-
-
-
-        
-
-
-
-
       </Routes>
     </div>
   );
