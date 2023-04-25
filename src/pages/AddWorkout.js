@@ -79,16 +79,24 @@ const AddWorkout = () => {
 
   return (
   
-  
-    
-
-
     <div className="add-workout">
       <Modal fetchWorkouts={fetchWorkouts} />
 
+<div className="full-width-container">
+  <video
+    className="video-myworkout full-width-video"
+    src="/assets/FitLogic-Myworkoutnew.mp4"
+    autoPlay
+    loop
+    muted
+  >
+  </video>
 
 
-      {editing && (
+  <div className="modal-container">
+  </div>
+</div>
+{editing && (
         <div className="edit-workout-form">
           <h2>Edit Workout</h2>
           <form onSubmit={handleUpdate} className="workout-form">
@@ -153,21 +161,6 @@ const AddWorkout = () => {
       )}
 
 
-<div className="full-width-container">
-  <video
-    className="video-myworkout full-width-video"
-    src="/assets/FitLogic-Myworkoutnew.mp4"
-    autoPlay
-    loop
-    muted
-  >
-  </video>
-
-
-  <div className="modal-container">
-  </div>
-</div>
-
       <div className="workout-list">
         <ul className='new-workout-ul '>
 
@@ -198,6 +191,7 @@ const AddWorkout = () => {
   
   </li>
 ))}
+
 
         </ul>
       </div>
