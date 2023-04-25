@@ -152,12 +152,17 @@ const AddWorkout = () => {
         </div>
       )}
 
-<div className="video-modal-container">
-  <video className='video-myworkout' src="/assets/FitLogic-Myworkout.mp4"
+
+<div className="full-width-container">
+  <video
+    className="video-myworkout full-width-video"
+    src="/assets/Meditation for Beginners.mp4"
     autoPlay
     loop
-    muted>
+    muted
+  >
   </video>
+
 
   <div className="modal-container">
   </div>
@@ -165,7 +170,8 @@ const AddWorkout = () => {
 
       <div className="workout-list">
         <ul className='new-workout-ul '>
-        {workouts.map((workout) => (
+
+       {workouts.map((workout) => (
   <li key={workout._id} className="workout-item">
     <div className="workout-info">
       <p>{workout.workout}</p>
@@ -184,12 +190,14 @@ const AddWorkout = () => {
         </div>
       )}
     </div>
-    <div>
-      <button className='workout-actions-edit' onClick={() => handleEdit(workout)}>Edit</button>
-      <button className='workout-actions-delete' onClick={() => handleDelete(workout._id)}>Delete</button>
+    <div className="workout-actions">
+    <button className="new-edit-btn" onClick={() => handleEdit(workout)}>Edit</button>
+<button className="new-delete-btn" onClick={() => handleDelete(workout._id)}>Delete</button>
+
     </div>
   </li>
 ))}
+
         </ul>
       </div>
     </div>
