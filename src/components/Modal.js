@@ -102,7 +102,7 @@ const Modal = ({ fetchWorkouts }) => {
                   name="category"
                   value={formData.category}
                   onChange={handleChange}
-                  required
+                  
                   className="input-field"
                 >
                   <option value="">Select category</option>
