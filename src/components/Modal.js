@@ -30,7 +30,7 @@ const Modal = ({ fetchWorkouts }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:4000/workouts', formData);
+      await axios.post('http://localhost:8080/workouts', formData);
       setFormData({ workout: '', sets: '', reps: '', youtubeVideo: '', category: '' });
       await fetchWorkouts();
       toggleModal();
