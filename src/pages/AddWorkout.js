@@ -24,7 +24,7 @@ const AddWorkout = () => {
 
   const fetchWorkouts = async () => {
     try {
-      const response = await axios.get('http://localhost:4000/workouts');
+      const response = await axios.get('http://localhost:8080/workouts');
       setWorkouts(response.data);
     } catch (error) {
       console.error(error);
@@ -49,7 +49,7 @@ const AddWorkout = () => {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:4000/workouts/${editing}`, formData);
+      await axios.put(`http://localhost:8080/workouts/${editing}`, formData);
       setEditing(null);
       setFormData({ workout: '', sets: '', reps: '', youtubeVideo: '', category: '' });
       fetchWorkouts();
@@ -60,7 +60,7 @@ const AddWorkout = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:4000/workouts/${id}`);
+      await axios.delete(`http://localhost:8080/workouts/${id}`);
       fetchWorkouts();
     } catch (error) {
       console.error(error);
