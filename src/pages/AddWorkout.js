@@ -156,7 +156,7 @@ const AddWorkout = () => {
 <div className="full-width-container">
   <video
     className="video-myworkout full-width-video"
-    src="/assets/Meditation for Beginners.mp4"
+    src="/assets/FitLogic-Myworkoutnew.mp4"
     autoPlay
     loop
     muted
@@ -187,14 +187,15 @@ const AddWorkout = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
-        </div>
-      )}
-    </div>
-    <div className="workout-actions">
+            <div className="workout-actions">
     <button className="new-edit-btn" onClick={() => handleEdit(workout)}>Edit</button>
 <button className="new-delete-btn" onClick={() => handleDelete(workout._id)}>Delete</button>
 
     </div>
+        </div>
+      )}
+    </div>
+  
   </li>
 ))}
 
