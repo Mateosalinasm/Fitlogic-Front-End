@@ -30,7 +30,7 @@ const Modal = ({ fetchWorkouts }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:4000/workouts', formData);
+      await axios.post('http://localhost:8080/workouts', formData);
       setFormData({ workout: '', sets: '', reps: '', youtubeVideo: '', category: '' });
       await fetchWorkouts();
       toggleModal();
@@ -47,7 +47,7 @@ const Modal = ({ fetchWorkouts }) => {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.8 }}
-          className="menu-btn"
+          className="new-workout-btn"
         >
           <button onClick={toggleModal} className="req-btn log-in-btn">
             New Workout
@@ -102,7 +102,7 @@ const Modal = ({ fetchWorkouts }) => {
                   name="category"
                   value={formData.category}
                   onChange={handleChange}
-                  required
+                  
                   className="input-field"
                 >
                   <option value="">Select category</option>
@@ -112,7 +112,7 @@ const Modal = ({ fetchWorkouts }) => {
                     </option>
                   ))}
                 </select>
-                <button type="submit" className="submit-btn">
+                <button type="submit" className="add-workout-menu">
                   Add Workout
                 </button>
               </form>
