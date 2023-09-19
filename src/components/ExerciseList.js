@@ -59,7 +59,7 @@ const SearchResult = (props) => {
 
   return (
     <div>
-      <h2>{props.exercise[0].Name}</h2>
+      <h2>{props.exercise[0].name}</h2>
       <p><strong>Type: </strong>{props.exercise[0].Type}</p>
       <p><strong>Primary Muscles: </strong>{props.exercise[0]['Primary Muscles'].join(', ')}</p>
       <p><strong>Secondary Muscles: </strong>{props.exercise[0].SecondaryMuscles.join(', ')}</p>

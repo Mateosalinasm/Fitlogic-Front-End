@@ -47,5 +47,18 @@
   "devDependencies": {
     "dotenv": "^16.0.3",
     "webpack": "^5.79.0"
-  }
+  },
+  "description": "<h1>Fitlogic<h1> <h4>Get Fit the Smart Way<h5>",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mateosalinasm/Fitlogic-Frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mateosalinasm/Fitlogic-Frontend/issues"
+  },
+  "homepage": "https://github.com/Mateosalinasm/Fitlogic-Frontend#readme"
 }
