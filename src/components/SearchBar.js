@@ -1,69 +1,8 @@
-// import React, { useState } from "react";
-// import { useNavigate } from "react-router-dom";
-
-// const API = process.env.REACT_APP_API;
-// function SearchBar(props) {
-//   console.log(props)
-//   const [searchQuery, setSearchQuery] = useState("");
-//   const [error, setError] = useState("");
-//   const navigate = useNavigate();
-
-//   const handleSearch = () => {
-//     const options = {
-//       method: "GET",
-//       url: "https://exerciseapi3.p.rapidapi.com/search/",
-//       params: { name: searchQuery },
-//       headers: {
-//         "X-RapidAPI-Key": `${API}`,
-//         "X-RapidAPI-Host": "exerciseapi3.p.rapidapi.com",
-//       },
-//     };
-  
-//     fetch(`https://exerciseapi3.p.rapidapi.com/search/?name=${searchQuery}`, options)
-//       .then(response => response.json())
-//       .then(data => {
-//         console.log(data);
-//         props.handleData(data)
-//         // navigate('/results'); // pass searchResults as state
-//         // navigate('/results', { state: {data} }); // pass searchResults as state
-// // 
-//       })
-//       .catch(error => {
-//         console.error(error);
-//         setError(error.message);
-//       });
-//   };
-
-//   const handleKeyDown = (event) => {
-//     if (event.key === "Enter") {
-//     handleSearch();
-//     }
-// };
-  
-
-//   return (
-//     <div>
-//     <input
-//         type="text"
-//         value={searchQuery}
-//         onChange={(event) => setSearchQuery(event.target.value)}
-//         onKeyDown={handleKeyDown} // Added this event handler
-//         placeholder="Search"
-//       />
-//       {/* <button onClick={handleSearch}>Search</button>
-//       {error && <p>{error}</p>} */}
-//     </div>
-// );
-// }
-
-// export default SearchBar;
-
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const API = process.env.REACT_APP_API;
-console.log(API)
+console.log(API) // GET RIN
 
 function SearchBar(props) {
   console.log(props);
@@ -73,17 +12,20 @@ function SearchBar(props) {
   const navigate = useNavigate();
 
   const handleSearch = () => {
+    console.log("Entering API")
+    const url = `https://exerciseapi3.p.rapidapi.com/exercise/name/${searchQuery}`;
+    const headers = {
+      "X-RapidAPI-Key": `${API}`,
+      "X-RapidAPI-Host": "exerciseapi3.p.rapidapi.com",
+    };
+        
     const options = {
       method: "GET",
-      url: "https://exerciseapi3.p.rapidapi.com/search/",
-      params: { name: searchQuery },
-      headers: {
-        "X-RapidAPI-Key": `${API}`,
-        "X-RapidAPI-Host": "exerciseapi3.p.rapidapi.com",
-      },
+      headers: headers,
     };
 
-    fetch(`https://exerciseapi3.p.rapidapi.com/search/?name=${searchQuery}`, options)
+    console.log('Should have gone through API...')
+    fetch(url, options)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -92,8 +34,8 @@ function SearchBar(props) {
         } else {
           setNotFound(false);
           props.handleData(data);
-          navigate("/results"); // pass searchResults as state
-          // navigate('/results', { state: {data} }); // pass searchResults as state
+          navigate("/results");
+          console.log('Nothing found')
         }
       })
       .catch((error) => {
